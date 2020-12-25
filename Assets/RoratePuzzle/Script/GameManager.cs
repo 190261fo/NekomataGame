@@ -28,12 +28,12 @@ public class GameManager : MonoBehaviour
     public AudioClip loseS;
     public AudioClip winS2;
     public AudioSource GameS;
-    public AudioSource MainS;
     public AudioSource SoundWIN;
 
     // Start is called before the first frame update
     public void Start()
     {
+        AudioManager.GetInstance().PlayBGM(20);
         animatorImageWIN.SetBool("IsOpen", false);
         BtnStart.interactable = true;
         BtnReplay.interactable = false;
@@ -66,7 +66,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public void wrongMove()
     {
         correctPic -= 1;
@@ -86,7 +85,6 @@ public class GameManager : MonoBehaviour
 
     public void setWin()
     {
-        MainS.volume = 0f;
         SoundWIN.PlayOneShot(winS2);
         GameS.PlayOneShot(winS1);
         timer.timecountdown.Stop();
@@ -108,7 +106,6 @@ public class GameManager : MonoBehaviour
 
     public void setLose()
     {
-        MainS.volume = 0f;
         GameS.PlayOneShot(loseS);
         timer.timeReady = true;
         TextWin_lose.text = "...敗北!";
@@ -120,7 +117,6 @@ public class GameManager : MonoBehaviour
 
     public void Replay()
     {
-        MainS.volume = 0.266f;
         Start();
         GameS.Stop();
         SoundWIN.Stop();
@@ -137,8 +133,6 @@ public class GameManager : MonoBehaviour
     public void　StartGame()
     {
         
-        
-        MainS.volume = 0.021f;
         timer.timeReady = false;
         timer.isPause = false;
         FlagRorate = true;
