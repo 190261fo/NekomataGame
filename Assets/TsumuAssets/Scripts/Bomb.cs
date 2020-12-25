@@ -8,10 +8,8 @@ using UnityEngine.SceneManagement;
 public class Bomb : MonoBehaviour {
 
 	public AudioClip bombSE;
-	AudioSource audioSource;
 
 	void Start () {
-		audioSource = gameObject.GetComponent<AudioSource> ();
 
 	}
 
@@ -25,8 +23,8 @@ public class Bomb : MonoBehaviour {
 
 		foreach (Collider2D collider in colliders) {
 			if (Block.IsBlock(collider.gameObject)) {
-				audioSource.PlayOneShot(bombSE);
 				Destroy (collider.gameObject);
+				AudioManager.GetInstance().PlaySound(13);
 			}
 		}
 		Destroy (gameObject);
