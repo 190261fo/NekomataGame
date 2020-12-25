@@ -19,7 +19,7 @@ public class LightButton : MonoBehaviour
 	public void OnClick()
 	{
 		main.SwitchLights(row, col, false);
-		AudioManager.GetInstance().PlaySound(0);
+		AudioManager.GetInstance().PlaySound(5);
 	}
 
 }
