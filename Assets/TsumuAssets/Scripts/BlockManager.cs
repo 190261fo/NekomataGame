@@ -11,8 +11,8 @@ public class BlockManager: MonoBehaviour {
 	Text finishText;
 	Text resultText;
 	float time = 1000;
-	public Boolean FlagTimeStart = false;
-	public Boolean isRunning = true;
+	Boolean FlagTimeStart = false;
+	Boolean isRunning = true;
 
 	public GameObject blockPrefab;
 	public GameObject bombPrefab;
@@ -25,12 +25,12 @@ public class BlockManager: MonoBehaviour {
 	FeverManager feverManager;
 
 	void Start () {
-		StartCoroutine (GenerateBlocks (60));
 		scoreManager = gameObject.AddComponent<ScoreManager> ();
 		feverManager = gameObject.AddComponent<FeverManager> ();
 		feverManager.RegisterOnFeverCallBack (() => AddTime(5));
 		GameObject canvas = GameObject.Find ("Canvas");
 		if (FlagTimeStart) {
+			StartCoroutine (GenerateBlocks (60));
 			if (canvas != null) {
 				// 制限時間
 				time = 5;
@@ -52,17 +52,19 @@ public class BlockManager: MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetMouseButton (0) && firstBlock == null) {
-			OnDragStart ();
-		} else if (Input.GetMouseButton (0) && firstBlock) {
-			OnDragging ();
-		} else if (Input.GetMouseButtonUp (0) && firstBlock) {
-			OnDragEnd ();
+		if (FlagTimeStart) {
+			if (Input.GetMouseButton (0) && firstBlock == null) {
+				OnDragStart ();
+			} else if (Input.GetMouseButton (0) && firstBlock) {
+				OnDragging ();
+			} else if (Input.GetMouseButtonUp (0) && firstBlock) {
+				OnDragEnd ();
+			}
 		}
 		time -= Time.deltaTime;
 		if (time < 0) {
 			time = 0;
-			if (isRunning == true) {
+			if (isRunning) {
                 AudioManager.GetInstance().PlaySound(14);
                 isRunning = false;
             }
@@ -72,7 +74,7 @@ public class BlockManager: MonoBehaviour {
 		SyncTimeGUI ();
 	}        
 
-	public void TimeStart() {
+	public void StartClick() {
 		AudioManager.GetInstance().PlaySound(10);
 		FlagTimeStart = true;
 		Start();
@@ -90,7 +92,6 @@ public class BlockManager: MonoBehaviour {
 
 	void SyncfinishGUI() {
 		if (finishText != null) {
-			// audioSource.PlayOneShot(resultSE);
 			finishText.text = "そこまで！！";
 		}
 	}
@@ -132,7 +133,6 @@ public class BlockManager: MonoBehaviour {
 				AddToRemoveBlockList(newBlock);
 			}
 		}
-		
 	}
 
 	void OnDragging() {
