@@ -66,7 +66,6 @@ public class NotificationBackManager : MonoBehaviour
 
     public void BtnYes() {
         Close();
-        gameManager.MainS.volume = 0.266f;
         timer.isPause = true;
         gameManager.GameS.Stop();
         gameManager.SoundWIN.Stop();
