@@ -33,7 +33,7 @@ public class BlockManager: MonoBehaviour {
 			StartCoroutine (GenerateBlocks (60));
 			if (canvas != null) {
 				// 制限時間
-				time = 5;
+				time = 60;
 				Transform timeGUI = canvas.transform.Find ("TimeGUI");
 				Transform finishGUI = canvas.transform.Find ("FinishGUI");
 				Transform resultGUI = canvas.transform.Find ("ResultGUI");
