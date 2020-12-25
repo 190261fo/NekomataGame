@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class Bomb : MonoBehaviour {
 
-	public AudioClip bombSE;
-
 	void Start () {
 
 	}
