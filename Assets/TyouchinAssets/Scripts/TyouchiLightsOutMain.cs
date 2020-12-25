@@ -176,7 +176,7 @@ public class TyouchiLightsOutMain : MonoBehaviour
 			Button button = light.GetComponent<Button>();
 			button.interactable = false;
 		}
-
+		AudioManager.GetInstance().PlaySound(6);
 		clearText.enabled = true;
 	}
 
