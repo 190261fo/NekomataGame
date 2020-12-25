@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Fungus;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class NekomataController : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class NekomataController : MonoBehaviour
     public float speed = 3.0f;
 
     //宣言
-    Rigidbody2D rigidbody2d;
+    public Rigidbody2D rigidbody2d;
     float horizontal; 
     float vertical;
 
@@ -117,9 +119,15 @@ public class NekomataController : MonoBehaviour
             // 移動量を加算する
             Vector2 position = rigidbody2d.position;
             position.x = position.x + speed * horizontal * Time.deltaTime;
-            position.y = position.y + speed * vertical * Time.deltaTime;
-
+            position.y = position.y + speed * vertical * Time.deltaTime;           
             rigidbody2d.MovePosition(position);
+
+
+
+
         }
     }
+
+
+    
 }

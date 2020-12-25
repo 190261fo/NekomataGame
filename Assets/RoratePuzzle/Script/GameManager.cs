@@ -23,7 +23,8 @@ public class GameManager : MonoBehaviour
     public Text TextWin_lose;
     public Button BtnStart, BtnReplay;
 
-    public NotificationManager notificationManager;
+    public NotificationBackManager notificationBackManager;
+    public NotificationQuitManager notificationQuitManager;
     public AudioClip winS1;
     public AudioClip loseS;
     public AudioClip winS2;
@@ -101,7 +102,9 @@ public class GameManager : MonoBehaviour
             pic.GetComponent<SpriteRenderer>().color = new Color32(0, 0, 0, 0);
         }
         animatorImageWIN.SetBool("IsOpen", true);
-        
+
+        notificationQuitManager.Open();
+
     }
 
     public void setLose()
@@ -112,6 +115,7 @@ public class GameManager : MonoBehaviour
         TextWin_lose.color = new Color32(162, 11, 0, 255);
         animatorTextWinLose.SetBool("isOpen", true);
         蛇パズル_背景.GetComponent<SpriteRenderer>().color = new Color32(82, 56, 27, 255);
+        notificationQuitManager.Open();
     }
 
 
@@ -127,7 +131,7 @@ public class GameManager : MonoBehaviour
         GameS.Pause();
         SoundWIN.Pause();
         timer.isPause = true;
-        notificationManager.Open();
+        notificationBackManager.Open();
     }
 
     public void　StartGame()

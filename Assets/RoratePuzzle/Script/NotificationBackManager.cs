@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class NotificationManager : MonoBehaviour
+public class NotificationBackManager : MonoBehaviour
 
 
 
