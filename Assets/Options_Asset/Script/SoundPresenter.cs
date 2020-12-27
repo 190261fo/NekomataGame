@@ -28,4 +28,5 @@ public class SoundPresenter : MonoBehaviour {
     public void OnPush() {
         AudioManager.GetInstance().PlaySound(0); // テスト
     }
+    
 }
