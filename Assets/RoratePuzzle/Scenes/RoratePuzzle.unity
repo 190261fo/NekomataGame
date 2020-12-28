@@ -765,7 +765,7 @@ RectTransform:
   m_LocalScale: {x: 0.023358382, y: 0.023358382, z: 0.023358382}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2089,9 +2089,6 @@ MonoBehaviour:
   BtnReplay: {fileID: 73814153}
   notificationBackManager: {fileID: 1354627055}
   notificationQuitManager: {fileID: 619083002}
-  winS1: {fileID: 8300000, guid: f60fc64d5d52a0c4d9de4764af1e45ef, type: 3}
-  loseS: {fileID: 8300000, guid: 588f6666cc73fc441b6233e780ff6480, type: 3}
-  winS2: {fileID: 8300000, guid: c084ff48fb89c104b926f59e8e0e1f38, type: 3}
   GameS: {fileID: 170811725}
   SoundWIN: {fileID: 307184079}
 --- !u!4 &170811724
@@ -2106,7 +2103,7 @@ Transform:
   m_LocalScale: {x: 1.0003612, y: 1.0003612, z: 1.0003612}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &170811725
 AudioSource:
@@ -3246,7 +3243,7 @@ RectTransform:
   m_Children:
   - {fileID: 1218295621}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3780,7 +3777,6 @@ MonoBehaviour:
   isPause: 1
   timeReady: 0
   timecountdown: {fileID: 316956296}
-  timeS: {fileID: 8300000, guid: 7f329a601878d0049b281edd7c7dbfa5, type: 3}
 --- !u!114 &316956293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4029,7 +4025,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5432,7 +5428,7 @@ RectTransform:
   m_LocalScale: {x: 0.023376498, y: 0.023376498, z: 0.023376498}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9433,7 +9429,7 @@ RectTransform:
   m_LocalScale: {x: 0.023376498, y: 0.023376498, z: 0.023376498}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10813,6 +10809,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8015621097340012733, guid: 1acc6247f9529cb439bb00347962513c,
+        type: 3}
+      propertyPath: seList.Array.data[32]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f329a601878d0049b281edd7c7dbfa5, type: 3}
+    - target: {fileID: 8015621097340012733, guid: 1acc6247f9529cb439bb00347962513c,
+        type: 3}
+      propertyPath: bgmList.Array.data[21]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015621097340012733, guid: 1acc6247f9529cb439bb00347962513c,
+        type: 3}
+      propertyPath: seList.Array.data[33]
+      value: 
+      objectReference: {fileID: 8300000, guid: f60fc64d5d52a0c4d9de4764af1e45ef, type: 3}
+    - target: {fileID: 8015621097340012733, guid: 1acc6247f9529cb439bb00347962513c,
+        type: 3}
+      propertyPath: seList.Array.data[34]
+      value: 
+      objectReference: {fileID: 8300000, guid: c084ff48fb89c104b926f59e8e0e1f38, type: 3}
+    - target: {fileID: 8015621097340012733, guid: 1acc6247f9529cb439bb00347962513c,
+        type: 3}
+      propertyPath: seList.Array.data[35]
+      value: 
+      objectReference: {fileID: 8300000, guid: 588f6666cc73fc441b6233e780ff6480, type: 3}
     - target: {fileID: 8015621097340012734, guid: 1acc6247f9529cb439bb00347962513c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10851,7 +10872,7 @@ PrefabInstance:
     - target: {fileID: 8015621097340012734, guid: 1acc6247f9529cb439bb00347962513c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8015621097340012734, guid: 1acc6247f9529cb439bb00347962513c,
         type: 3}
