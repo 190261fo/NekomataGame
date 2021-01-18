@@ -12,8 +12,6 @@ public class AudioManager : MonoBehaviour {
     [SerializeField] AudioClip[] seList;
     [SerializeField] AudioSource audioSourceSE;
 
-    public WriterAudio writerAudio;
-
     public float BGMVolume {
         get { return audioSourceBGM.volume; }
         set { audioSourceBGM.volume = value; }

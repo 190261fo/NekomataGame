@@ -10,10 +10,8 @@ public class GameManager : MonoBehaviour
 
 
     public Timer timer;
-    [SerializeField]
-    int totalPic = 0;
-    [SerializeField]
-    int correctPic = 0;
+    [SerializeField] int totalPic = 0;
+    [SerializeField] int correctPic = 0;
     public Boolean Win;
     public Boolean FlagRorate;
     public GameObject 蛇パズル_背景;
@@ -25,13 +23,9 @@ public class GameManager : MonoBehaviour
 
     public NotificationBackManager notificationBackManager;
     public NotificationQuitManager notificationQuitManager;
-    public AudioClip winS1;
-    public AudioClip loseS;
-    public AudioClip winS2;
     public AudioSource GameS;
     public AudioSource SoundWIN;
 
-    // Start is called before the first frame update
     public void Start()
     {
         AudioManager.GetInstance().PlayBGM(20);
@@ -86,8 +80,8 @@ public class GameManager : MonoBehaviour
 
     public void setWin()
     {
-        SoundWIN.PlayOneShot(winS2);
-        GameS.PlayOneShot(winS1);
+        AudioManager.GetInstance().PlaySound(33);
+        AudioManager.GetInstance().PlaySound(34);
         timer.timecountdown.Stop();
         TextWin_lose.text = "...勝利!";
         TextWin_lose.color = new Color32(198, 129, 22, 255);
@@ -109,7 +103,7 @@ public class GameManager : MonoBehaviour
 
     public void setLose()
     {
-        GameS.PlayOneShot(loseS);
+        AudioManager.GetInstance().PlaySound(35);
         timer.timeReady = true;
         TextWin_lose.text = "...敗北!";
         TextWin_lose.color = new Color32(162, 11, 0, 255);
