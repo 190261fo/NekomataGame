@@ -3,76 +3,99 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //シーン切り替えに使用するライブラリ
 using System;
+using Assets.Script;
 
 public class ChangeScene : MonoBehaviour
 {
+    public DataManager dataManager;
     public Fade fade;
     // public Boolean FadeStart = true;
     // public Boolean Flag_RorateGame = false;
     float time = 1.3f; // フェードイン・アウト時間
 
     // StartFadeにチェック有の場合
-	void Start () {
+    void Start()
+    {
         fade.FadeOut(time);
     }
 
+
+    public void NewGame_btn()
+    {
+        PlayerPrefs.DeleteKey("p_x");
+        PlayerPrefs.DeleteKey("p_y");
+        PlayerPrefs.DeleteKey("Load");
+        PlayerPrefs.DeleteKey("Saved");
+        ChangeGenjitsu();
+    }
+
+    public void ContinueGame_btn()
+    {
+        ChangeMap(PlayerPrefs.GetString("Scene"));
+    }
+
+
+    public void ChangeMap(String SceneName)
+    {
+        LoadLevel(SceneName);
+    }
     // 現実世界 へ遷移
     public void ChangeGenjitsu()
     {
-        LoadLevel ("GenjitsuScene");
+        LoadLevel("GenjitsuScene");
     }
 
     // 異世界 へ遷移
     public void ChangeIsekai()
     {
-        LoadLevel ("IsekaiScene");
+        LoadLevel("IsekaiScene");
     }
 
     // オプション画面 へ遷移
     public void ChangeOption()
     {
-        LoadLevel ("OptionScene");
+        LoadLevel("OptionScene");
     }
 
     // メニュー画面 へ遷移
     public void ChangeMenu()
     {
-        LoadLevel ("MenuScene");
+        LoadLevel("MenuScene");
     }
 
     // タイトル画面 へ遷移
     public void ChangeTitle()
     {
-        LoadLevel ("TitleScene");
+        LoadLevel("TitleScene");
     }
 
     // ミニゲーム1 へ遷移
     public void ChangeMinigame1()
     {
-        LoadLevel ("TyouchinLightsOut");
+        LoadLevel("TyouchinLightsOut");
     }
 
     // ミニゲーム へ遷移
     public void ChangeMinigame2()
     {
-        LoadLevel ("Tsumu");
+        LoadLevel("Tsumu");
     }
 
     // ミニゲーム3 へ遷移
     public void ChangeMinigame3()
     {
-        LoadLevel ("RoratePuzzle");
+        LoadLevel("RoratePuzzle");
     }
 
-    void LoadLevel (string name)
-	{
-		// フェードイン
-		fade.FadeIn(time, () =>
-		{
-			// フェードイン完了後の処理（画面は真っ暗）
-			Application.LoadLevel(name); //　シーン遷移
-		});
-	}
+    void LoadLevel(string name)
+    {
+        // フェードイン
+        fade.FadeIn(time, () =>
+        {
+            // フェードイン完了後の処理（画面は真っ暗）
+            Application.LoadLevel(name); //　シーン遷移
+        });
+    }
 
     void Update()
     {
@@ -121,6 +144,17 @@ public class ChangeScene : MonoBehaviour
         {
             // 「M」クリックで 異世界 へ遷移
             SceneManager.LoadScene("MenuScene");
+        }
+        else if (Input.GetKeyDown(KeyCode.F))
+        {
+            // 「M」クリックで 異世界 へ遷移
+            dataManager.SavePosition();
+            dataManager.SaveScene(SceneManager.GetActiveScene().name);
+        }
+        else if (Input.GetKeyDown(KeyCode.L))
+        {
+            // 「M」クリックで 異世界 へ遷移
+            dataManager.LoadPodsition();
         }
     }
 }
