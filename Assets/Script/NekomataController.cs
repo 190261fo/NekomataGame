@@ -5,12 +5,14 @@ using System;
 using Fungus;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using Assets.Script;
+using UnityEngine.SceneManagement;
 
 public class NekomataController : MonoBehaviour
 {
     //キャラの移動速度変更用
     public float speed = 3.0f;
-
+    DataManager dataManager;
     //宣言
     public Rigidbody2D rigidbody2d;
     float horizontal; 
@@ -86,7 +88,8 @@ public class NekomataController : MonoBehaviour
         if (flowchart1.GetBooleanVariable("IsTalking") || flowchart2.GetBooleanVariable("IsTalking"))
         {
             //Debug.Log("Don't move!");
-
+            dataManager.SavePosition();
+            dataManager.SaveScene(SceneManager.GetActiveScene().name);
             move = new Vector2(0, 0);
             animator.SetFloat("Speed", move.magnitude);
         }
@@ -126,6 +129,16 @@ public class NekomataController : MonoBehaviour
 
 
         }
+
+        
+    }
+
+
+    private void Awake()
+    {
+        dataManager = FindObjectOfType<DataManager>();
+        dataManager.SetLoad();
+
     }
 
     public void PlayWalkSound() {
