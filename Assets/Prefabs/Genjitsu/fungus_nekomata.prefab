@@ -47,7 +47,8 @@ MonoBehaviour:
   nameColor: {r: 0.13166428, g: 0.105286576, b: 0.24528301, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: bc9b93313ef4fb74088303f0894e5e55, type: 3}
+  - {fileID: 21300000, guid: 81a5669f914324e4c8b8d7725089b118, type: 3}
+  - {fileID: 21300000, guid: 049f531a7d785d64ca3c01b258efad2d, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
