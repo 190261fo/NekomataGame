@@ -443,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 8160427928163026823, guid: c3c5c10d4da00c446a972dc66b7e4978,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeIsekai
+      value: ContinueGame_btn
       objectReference: {fileID: 0}
     - target: {fileID: 8160427928163026823, guid: c3c5c10d4da00c446a972dc66b7e4978,
         type: 3}
@@ -1504,6 +1504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7d6e2c501f6fc4db5d440cb59ffac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataManager: {fileID: 0}
   fade: {fileID: 3843790246520623109}
 --- !u!1 &5530771035099154930
 GameObject:
@@ -1687,7 +1688,7 @@ PrefabInstance:
     - target: {fileID: 8160427928163026823, guid: c3c5c10d4da00c446a972dc66b7e4978,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeGenjitsu
+      value: NewGame_btn
       objectReference: {fileID: 0}
     - target: {fileID: 8160427928163026823, guid: c3c5c10d4da00c446a972dc66b7e4978,
         type: 3}
