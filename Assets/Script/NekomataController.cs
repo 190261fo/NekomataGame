@@ -88,8 +88,8 @@ public class NekomataController : MonoBehaviour
         if (flowchart1.GetBooleanVariable("IsTalking") || flowchart2.GetBooleanVariable("IsTalking"))
         {
             //Debug.Log("Don't move!");
-            dataManager.SavePosition();
-            dataManager.SaveScene(SceneManager.GetActiveScene().name);
+            dataManager.SaveGame();
+            //dataManager.SaveScene(SceneManager.GetActiveScene().name);
             move = new Vector2(0, 0);
             animator.SetFloat("Speed", move.magnitude);
         }
