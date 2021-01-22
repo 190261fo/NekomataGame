@@ -154,6 +154,7 @@ public class ChangeScene : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.L))
         {
             // 「M」クリックで 異世界 へ遷移
+            ChangeMap(PlayerPrefs.GetString("Scene"));
             dataManager.LoadPodsition();
         }
     }
