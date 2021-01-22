@@ -128,6 +128,8 @@ public class NekomataController : MonoBehaviour
         }
     }
 
-
+    public void PlayWalkSound() {
+        AudioManager.GetInstance().PlaySound(1);
+    }
     
 }
