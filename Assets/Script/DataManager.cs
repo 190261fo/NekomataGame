@@ -4,6 +4,7 @@ using System.Collections;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Script
 {
@@ -105,11 +106,12 @@ namespace Assets.Script
 
 
 
-        public void SavePosition()
+        public void SaveGame()
         {
             PlayerPrefs.SetFloat("p_x", player.transform.position.x);
             PlayerPrefs.SetFloat("p_y", player.transform.position.y);
             PlayerPrefs.SetInt("Saved", 1);
+            SaveScene(SceneManager.GetActiveScene().name);
             PlayerPrefs.Save();
         }
 
@@ -121,14 +123,16 @@ namespace Assets.Script
         }
 
 
-        public void LoadPodsition()
+        public void LoadPosition()
         {
+            
             float pX = player.transform.position.x;
             float pY = player.transform.position.y;
 
             pX = PlayerPrefs.GetFloat("p_x");
             pY = PlayerPrefs.GetFloat("p_y");
             player.transform.position = new Vector2(pX, pY);
+            
             SetLoad();
         }
 
@@ -137,6 +141,12 @@ namespace Assets.Script
             PlayerPrefs.SetString("Scene", SceneName);
             PlayerPrefs.Save();
         }
+
+        
+
+        
+
+        
 
 
 
