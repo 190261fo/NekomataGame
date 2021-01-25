@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MenuMain : MonoBehaviour
 {
-    public static bool IsMenu = false;
+    public static Boolean IsMenu = false;
     public GameObject MenuUI;
     // Update is called once per frame
     void Update()
@@ -34,6 +34,11 @@ public class MenuMain : MonoBehaviour
     {
         MenuUI.SetActive(false);
         IsMenu = false;
+    }
+
+    public void setMenuUIActive(Boolean x)
+    {
+        MenuUI.SetActive(x);
     }
 
 }

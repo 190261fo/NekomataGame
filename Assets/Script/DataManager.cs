@@ -142,11 +142,22 @@ namespace Assets.Script
             PlayerPrefs.Save();
         }
 
-        
+
+        public void SaveSceneTitle()
+        {
+            PlayerPrefs.SetString("TitleScene", "TitleScene");
+            PlayerPrefs.Save();
+        }
 
         
 
-        
+
+
+
+
+
+
+
 
 
 

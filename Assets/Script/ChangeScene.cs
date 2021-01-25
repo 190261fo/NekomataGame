@@ -7,6 +7,7 @@ using Assets.Script;
 
 public class ChangeScene : MonoBehaviour
 {
+    public  static int CheckBack = 0;
     public DataManager dataManager;
     public Fade fade;
     // public Boolean FadeStart = true;
@@ -152,6 +153,23 @@ public class ChangeScene : MonoBehaviour
         dataManager.LoadPosition();
     }
 
+    public static void setCheckBack(int i)
+    {
+        CheckBack = i;
+    }
+
+
+    public void ContinuteWithOption()
+    {
+        if(CheckBack == 1)
+        {
+            ChangeMap(PlayerPrefs.GetString("TitleScene"));
+        }
+        else if(CheckBack == 2)
+        {
+            ChangeMap(PlayerPrefs.GetString("Scene"));
+        }
+    }
 
     
 }
