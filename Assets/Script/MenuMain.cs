@@ -15,11 +15,12 @@ public class MenuMain : MonoBehaviour
             if (IsMenu)
             {
                 Resume();
-                
+                AudioManager.GetInstance().PlaySound(3);
             }
             else
             {
                 Pause();
+                AudioManager.GetInstance().PlaySound(4);
             }
         }
     }
