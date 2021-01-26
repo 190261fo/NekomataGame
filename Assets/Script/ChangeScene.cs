@@ -7,6 +7,7 @@ using Assets.Script;
 
 public class ChangeScene : MonoBehaviour
 {
+    public  static int CheckBack = 0;
     public DataManager dataManager;
     public Fade fade;
     // public Boolean FadeStart = true;
@@ -19,7 +20,7 @@ public class ChangeScene : MonoBehaviour
         fade.FadeOut(time);
     }
 
-
+    
     public void NewGame_btn()
     {
         PlayerPrefs.DeleteKey("p_x");
@@ -140,22 +141,35 @@ public class ChangeScene : MonoBehaviour
             // 「O」クリックで 異世界 へ遷移
             SceneManager.LoadScene("OptionScene");
         }
-        else if (Input.GetKeyDown(KeyCode.M))
+
+        
+
+        
+    }
+
+    public void LoadGame()
+    {
+        ChangeMap(PlayerPrefs.GetString("Scene"));
+        dataManager.LoadPosition();
+    }
+
+    public static void setCheckBack(int i)
+    {
+        CheckBack = i;
+    }
+
+
+    public void ContinuteWithOption()
+    {
+        if(CheckBack == 1)
         {
-            // 「M」クリックで 異世界 へ遷移
-            SceneManager.LoadScene("MenuScene");
+            ChangeMap(PlayerPrefs.GetString("TitleScene"));
         }
-        else if (Input.GetKeyDown(KeyCode.F))
+        else if(CheckBack == 2)
         {
-            // 「M」クリックで 異世界 へ遷移
-            dataManager.SavePosition();
-            dataManager.SaveScene(SceneManager.GetActiveScene().name);
-        }
-        else if (Input.GetKeyDown(KeyCode.L))
-        {
-            // 「M」クリックで 異世界 へ遷移
             ChangeMap(PlayerPrefs.GetString("Scene"));
-            dataManager.LoadPodsition();
         }
     }
+
+    
 }
