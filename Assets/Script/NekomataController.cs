@@ -145,4 +145,8 @@ public class NekomataController : MonoBehaviour
         AudioManager.GetInstance().PlaySound(1);
     }
     
+    public void OnCollisionEnter2D(UnityEngine.Collision2D collision) {
+        AudioManager.GetInstance().PlaySound(2);
+    }
+
 }
