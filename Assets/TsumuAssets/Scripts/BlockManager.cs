@@ -99,12 +99,18 @@ public class BlockManager: MonoBehaviour {
 	public void SyncResultGUI() {
   		if (resultText != null) {
     		if (int.Parse(scoreManager.scoreText.text) >= 150000){
-      			resultText.text = "クリアSSS"; 
-    		} else if (int.Parse(scoreManager.scoreText.text) >= 100000){
+      			resultText.text = "クリアSSS";
+				PlayerPrefs.SetInt("Tsumu", 1);
+				PlayerPrefs.Save();
+			} else if (int.Parse(scoreManager.scoreText.text) >= 100000){
       			resultText.text = "クリアS";
-    		} else if (int.Parse(scoreManager.scoreText.text) >= 80000){
+				PlayerPrefs.SetInt("Tsumu", 1);
+				PlayerPrefs.Save();
+			} else if (int.Parse(scoreManager.scoreText.text) >= 80000){
       			resultText.text = "クリアA";
-    		} else {
+				PlayerPrefs.SetInt("Tsumu", 1);
+				PlayerPrefs.Save();
+			} else {
       			resultText.text = "クリア失敗";
 			}
     	}

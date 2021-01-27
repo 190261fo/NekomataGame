@@ -12,10 +12,17 @@ public class MainManager : MonoBehaviour
     public Animator menu_Ani, game_Ani;
     public Timer timer;
     public GameManager gameManager;
+    public static float AudioManagerVolume;
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManagerVolume = AudioManager.GetInstance().BGMVolume;
+        gameManager.MainS.volume = AudioManagerVolume;
+        gameManager.SoundWIN.volume = AudioManagerVolume;
+        gameManager.GameS.volume = AudioManagerVolume;
+        timer.timecountdown.volume = AudioManagerVolume;
+        AudioManager.GetInstance().BGM_Stop();
+       
     }
 
     // Update is called once per frame
@@ -40,6 +47,14 @@ public class MainManager : MonoBehaviour
         
     }
 
+
+    public float getAudioManagerVolume()
+    {
+        return AudioManagerVolume;
+        
+    }
+
+    
 
 
 }

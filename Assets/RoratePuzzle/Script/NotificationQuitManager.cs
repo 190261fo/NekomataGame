@@ -25,6 +25,7 @@ public class NotificationQuitManager : MonoBehaviour
 
     public void BtnYes()
     {
+        
         Close();
     }
 }

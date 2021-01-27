@@ -93,7 +93,6 @@ public class TyouchiLightsOutMain : MonoBehaviour
 				lightObjects[i, j] = button;
 			}
 		}
-
 		CreateProblem();
 	}
 
@@ -178,6 +177,8 @@ public class TyouchiLightsOutMain : MonoBehaviour
 		}
 		AudioManager.GetInstance().PlaySound(6);
 		clearText.enabled = true;
+		PlayerPrefs.SetInt("Tyouchin", 1);
+		PlayerPrefs.Save();
 	}
 
 	//ライトの色設定処理
