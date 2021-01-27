@@ -149,7 +149,8 @@ namespace Assets.Script
             PlayerPrefs.Save();
         }
 
-        
+
+        //Tsumu,RoratePuzzle,Tyouchin
 
 
 

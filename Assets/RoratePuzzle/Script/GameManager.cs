@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
 
     public Timer timer;
+    public MainManager mainManager;
     [SerializeField] int totalPic = 0;
     [SerializeField] int correctPic = 0;
     public Boolean Win;
@@ -23,12 +24,16 @@ public class GameManager : MonoBehaviour
 
     public NotificationBackManager notificationBackManager;
     public NotificationQuitManager notificationQuitManager;
+    public AudioClip winS1;
+    public AudioClip loseS;
+    public AudioClip winS2;
     public AudioSource GameS;
+    public AudioSource MainS;
     public AudioSource SoundWIN;
-
     public void Start()
     {
-        AudioManager.GetInstance().PlayBGM(20);
+        
+        //AudioManager.GetInstance().PlayBGM(20);
         animatorImageWIN.SetBool("IsOpen", false);
         BtnStart.interactable = true;
         BtnReplay.interactable = false;
@@ -80,8 +85,13 @@ public class GameManager : MonoBehaviour
 
     public void setWin()
     {
-        AudioManager.GetInstance().PlaySound(33);
-        AudioManager.GetInstance().PlaySound(34);
+        //AudioManager.GetInstance().PlaySound(33);
+        //AudioManager.GetInstance().PlaySound(34);
+        PlayerPrefs.SetInt("RoratePuzzle", 1);
+        PlayerPrefs.Save();
+        MainS.volume = 0.02f;
+        SoundWIN.PlayOneShot(winS2);
+        GameS.PlayOneShot(winS1);
         timer.timecountdown.Stop();
         TextWin_lose.text = "...勝利!";
         TextWin_lose.color = new Color32(198, 129, 22, 255);
@@ -103,7 +113,9 @@ public class GameManager : MonoBehaviour
 
     public void setLose()
     {
-        AudioManager.GetInstance().PlaySound(35);
+        //AudioManager.GetInstance().PlaySound(35);
+        MainS.volume = 0.02f;
+        GameS.PlayOneShot(loseS);
         timer.timeReady = true;
         TextWin_lose.text = "...敗北!";
         TextWin_lose.color = new Color32(162, 11, 0, 255);
@@ -115,6 +127,7 @@ public class GameManager : MonoBehaviour
 
     public void Replay()
     {
+        MainS.volume = mainManager.getAudioManagerVolume();
         Start();
         GameS.Stop();
         SoundWIN.Stop();
@@ -130,7 +143,7 @@ public class GameManager : MonoBehaviour
 
     public void　StartGame()
     {
-        
+        MainS.volume = 0.02f;
         timer.timeReady = false;
         timer.isPause = false;
         FlagRorate = true;

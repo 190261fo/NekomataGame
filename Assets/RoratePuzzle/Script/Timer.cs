@@ -28,8 +28,9 @@ public class Timer : MonoBehaviour
     public bool showMilliseconds;
     public Boolean isRunning, isPause, timeReady;
     public AudioSource timecountdown;
+    public AudioClip timeS;
 
-  
+
     public void TimeStart()
     {
         timecountdown.Stop();
@@ -80,8 +81,8 @@ public class Timer : MonoBehaviour
                         
                         if (currentSeconds < 5.3 && currentSeconds > 5.2)
                         {
-                            AudioManager.GetInstance().PlaySound(32);
-
+                            //AudioManager.GetInstance().PlaySound(32);
+                            timecountdown.PlayOneShot(timeS);
                         }
                         if (currentSeconds < 5.1 && currentSeconds > 5)
                         {

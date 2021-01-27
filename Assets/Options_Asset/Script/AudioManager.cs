@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour {
         if (Instance == null) {
             Instance = FindObjectOfType<AudioManager>();
         }
+        
         return Instance;
     }
 
@@ -52,6 +53,27 @@ public class AudioManager : MonoBehaviour {
     }
 
     
+
+
+    public void BGM_Stop()
+    {
+        audioSourceBGM.Stop();
+    }
+
+    public void BGM_Play()
+    {
+        audioSourceBGM.Play();
+    }
+
+    public void CheckBGMIsPlaying()
+    {
+        if (!audioSourceBGM.isPlaying)
+        {
+            audioSourceBGM.Play();
+        }
+    }
+
+
 
 
 

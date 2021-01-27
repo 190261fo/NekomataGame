@@ -23,10 +23,15 @@ public class ChangeScene : MonoBehaviour
     
     public void NewGame_btn()
     {
+        //Tsumu,RoratePuzzle,Tyouchin
         PlayerPrefs.DeleteKey("p_x");
         PlayerPrefs.DeleteKey("p_y");
         PlayerPrefs.DeleteKey("Load");
         PlayerPrefs.DeleteKey("Saved");
+        PlayerPrefs.DeleteKey("Tsumu");
+        PlayerPrefs.DeleteKey("RoratePuzzle");
+        PlayerPrefs.DeleteKey("Tyouchin");
+        PlayerPrefs.DeleteKey("Scene");
         ChangeGenjitsu();
     }
 

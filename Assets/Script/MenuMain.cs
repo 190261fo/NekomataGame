@@ -7,9 +7,25 @@ public class MenuMain : MonoBehaviour
 {
     public static Boolean IsMenu = false;
     public GameObject MenuUI;
+    public GameObject Youryoku_kappa;
+    public GameObject Youryoku_tengu;
+    public GameObject Youryoku_zashiki;
     // Update is called once per frame
     void Update()
     {
+        //Tsumu,RoratePuzzle,Tyouchin
+        if (PlayerPrefs.GetInt("Tsumu")== 1)
+        {
+            Youryoku_zashiki.SetActive(true);
+        }
+        if (PlayerPrefs.GetInt("RoratePuzzle") == 1)
+        {
+            Youryoku_tengu.SetActive(true);
+        }
+        if (PlayerPrefs.GetInt("Tyouchin") == 1)
+        {
+            Youryoku_kappa.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.M))
         {
             if (IsMenu)
@@ -41,5 +57,8 @@ public class MenuMain : MonoBehaviour
     {
         MenuUI.SetActive(x);
     }
+
+
+
 
 }
