@@ -81,7 +81,7 @@ public class ChangeScene : MonoBehaviour
         LoadLevel("TyouchinLightsOut");
     }
 
-    // ミニゲーム へ遷移
+    // ミニゲーム2へ遷移
     public void ChangeMinigame2()
     {
         LoadLevel("Tsumu");
@@ -91,6 +91,12 @@ public class ChangeScene : MonoBehaviour
     public void ChangeMinigame3()
     {
         LoadLevel("RoratePuzzle");
+    }
+
+    //エンディングシーンへ遷移
+    public void ChangeEnding()
+    {
+        LoadLevel("EndingScene");
     }
 
     void LoadLevel(string name)
@@ -147,9 +153,6 @@ public class ChangeScene : MonoBehaviour
             SceneManager.LoadScene("OptionScene");
         }
 
-        
-
-        
     }
 
     public void LoadGame()

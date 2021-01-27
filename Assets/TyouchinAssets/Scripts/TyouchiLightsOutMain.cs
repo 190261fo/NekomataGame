@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
 
 public class TyouchiLightsOutMain : MonoBehaviour
 {
@@ -30,8 +31,10 @@ public class TyouchiLightsOutMain : MonoBehaviour
 	bool[,] lightStatus;
 	GameObject[,] lightObjects;
 
-	//ランダムに問題を生成する処理
-	public void CreateProblem()
+    public Flowchart flowchart1;
+
+    //ランダムに問題を生成する処理
+    public void CreateProblem()
 	{
 		clearText.enabled = false;
 
