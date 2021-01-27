@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1543196221}
+  selectedFlowchart: {fileID: 0}
 --- !u!4 &171588495
 Transform:
   m_ObjectHideFlags: 1
@@ -1010,6 +1010,7 @@ MonoBehaviour:
   offButtonColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
   offButtonHighlightedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   clearText: {fileID: 511955626}
+  flowchart1: {fileID: 0}
 --- !u!1 &1965323788
 GameObject:
   m_ObjectHideFlags: 0
