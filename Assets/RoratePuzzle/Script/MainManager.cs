@@ -18,7 +18,6 @@ public class MainManager : MonoBehaviour
     {
         AudioManagerVolume = AudioManager.GetInstance().BGMVolume;
         gameManager.MainS.volume = AudioManagerVolume;
-        gameManager.SoundWIN.volume = AudioManagerVolume;
         gameManager.GameS.volume = AudioManagerVolume;
         timer.timecountdown.volume = AudioManagerVolume;
         AudioManager.GetInstance().BGM_Stop();

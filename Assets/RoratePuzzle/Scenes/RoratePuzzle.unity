@@ -2082,12 +2082,10 @@ MonoBehaviour:
   BtnReplay: {fileID: 73814153}
   notificationBackManager: {fileID: 1354627055}
   notificationQuitManager: {fileID: 619083002}
-  winS1: {fileID: 8300000, guid: f60fc64d5d52a0c4d9de4764af1e45ef, type: 3}
+  winS: {fileID: 8300000, guid: 64112fa33221a5640b5d574ed2a76447, type: 3}
   loseS: {fileID: 8300000, guid: 588f6666cc73fc441b6233e780ff6480, type: 3}
-  winS2: {fileID: 8300000, guid: c084ff48fb89c104b926f59e8e0e1f38, type: 3}
   GameS: {fileID: 170811725}
   MainS: {fileID: 519420030}
-  SoundWIN: {fileID: 307184079}
 --- !u!4 &170811724
 Transform:
   m_ObjectHideFlags: 0
@@ -5729,6 +5727,18 @@ MonoBehaviour:
       - m_Target: {fileID: 631489084}
         m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
         m_MethodName: click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 619083002}
+        m_TargetAssemblyTypeName: NotificationQuitManager, Assembly-CSharp
+        m_MethodName: UnpauseMainS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
