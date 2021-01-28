@@ -8,7 +8,4 @@ public class GenjiBGM : MonoBehaviour {
         AudioManager.GetInstance().PlayBGM(5);
     }
 
-    void Update() {
-
-    }
 }
