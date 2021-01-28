@@ -53,4 +53,9 @@ public class NotificationGameManager : MonoBehaviour
     {
         QuitClose();
     }
+
+    public void animationQuit_BtnNoSave()
+    {
+        dataManager.DeleteData();
+    }
 }

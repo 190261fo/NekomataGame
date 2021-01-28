@@ -11,85 +11,16 @@ namespace Assets.Script
     public class DataManager : MonoBehaviour
     {
 
-
-        //public Flowchart flowchart1;
-        //public Flowchart flowchart2;
-        //public NekomataController nekomata;
-        //// Use this for initialization
-        //void Start()
-        //{
-        //    Debug.Log(Application.persistentDataPath);
-        //}
-
-        //// Update is called once per frame
-        //void Update()
-        //{
-        //    if (Input.GetKeyDown(KeyCode.S))
-        //    {
-        //        Save();
-        //    }
-
-        //    if (Input.GetKeyDown(KeyCode.L))
-        //    {
-        //        Load();
-        //    }
-        //    //if (flowchart1.GetBooleanVariable("IsTalking") || flowchart2.GetBooleanVariable("IsTalking"))
-        //    //{
-        //    //Save();    
-        //    //}
-        //}
-        //private void Load()
-        //{
-        //    string path = Application.persistentDataPath + "/SaveData.dat";
-        //    if (File.Exists(path))
-        //    {
-        //        BinaryFormatter bf = new BinaryFormatter();
-        //        FileStream file = new FileStream(path, FileMode.Open);
-        //        int a =   (int) bf.Deserialize(file) ;
-        //        Debug.Log(a);
-
-
-
-        //    }
-        //    else
-        //    {
-        //        Debug.LogError("Save file not found in" + path);
-
-        //    }
-
-        //}
-
-        //private void LoadPlayer(SaveData data)
-        //{
-        //    nekomata.UpdateData(data);
-        //}
-
-        //private void Save()
-        //{
-        //    BinaryFormatter bf = new BinaryFormatter();
-        //    string path = Application.persistentDataPath + "/SaveData.dat";
-        //    FileStream file = new FileStream(path, FileMode.Create);
-
-
-        //    //SaveData data = new SaveData();
-
-        //    bf.Serialize(file, 1);
-
-        //    file.Close();
-
-
-
-        //}
-
-        //private SaveData SavePlayer(SaveData Data)
-        //{
-        //    Data.NekomataData = new PlayerData(nekomata.rigidbody2d.position);
-        //    return Data;
-        //}
-
         public GameObject player;
         private void Start()
         {
+            Debug.Log("X : " + PlayerPrefs.GetFloat("p_x"));
+            Debug.Log("Y : " + PlayerPrefs.GetFloat("p_x"));
+            Debug.Log("Scene : " + PlayerPrefs.GetString("Scene"));
+            Debug.Log("Load : " + PlayerPrefs.GetInt("Load"));
+            Debug.Log("Saved : " + PlayerPrefs.GetInt("Saved"));
+
+
             if (PlayerPrefs.GetInt("Saved") == 1 && PlayerPrefs.GetInt("Load") == 1)
             {
                 float pX = player.transform.position.x;
@@ -100,6 +31,18 @@ namespace Assets.Script
                 player.transform.position = new Vector2(pX, pY);
                 PlayerPrefs.SetInt("Load", 0);
                 PlayerPrefs.Save();
+            }
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                Debug.Log("X : " + PlayerPrefs.GetFloat("p_x"));
+                Debug.Log("Y : " + PlayerPrefs.GetFloat("p_x"));
+                Debug.Log("Scene : " + PlayerPrefs.GetString("Scene"));
+                Debug.Log("Load : " + PlayerPrefs.GetInt("Load"));
+                Debug.Log("Saved : " + PlayerPrefs.GetInt("Saved"));
             }
         }
 
@@ -146,6 +89,19 @@ namespace Assets.Script
         public void SaveSceneTitle()
         {
             PlayerPrefs.SetString("TitleScene", "TitleScene");
+            PlayerPrefs.Save();
+        }
+
+        public void DeleteData()
+        {
+            PlayerPrefs.DeleteKey("p_x");
+            PlayerPrefs.DeleteKey("p_y");
+            PlayerPrefs.DeleteKey("Load");
+            PlayerPrefs.DeleteKey("Saved");
+            PlayerPrefs.DeleteKey("Tsumu");
+            PlayerPrefs.DeleteKey("RoratePuzzle");
+            PlayerPrefs.DeleteKey("Tyouchin");
+            PlayerPrefs.DeleteKey("Scene");
             PlayerPrefs.Save();
         }
 
