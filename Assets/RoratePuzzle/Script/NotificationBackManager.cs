@@ -36,10 +36,7 @@ public class NotificationBackManager : MonoBehaviour
     {      
         animator.SetBool("IsOpen", false);
         
-        if(gameManager.SoundWIN.isPlaying == false)
-        {
-            gameManager.SoundWIN.UnPause();
-        }
+        
         if (gameManager.GameS.isPlaying == false)
         {
             gameManager.GameS.UnPause();
@@ -68,7 +65,6 @@ public class NotificationBackManager : MonoBehaviour
         Close();
         timer.isPause = true;
         gameManager.GameS.Stop();
-        gameManager.SoundWIN.Stop();
         mainManager.Back();
         if (gameManager.animatorTextWinLose.GetBool("isOpen"))
         {

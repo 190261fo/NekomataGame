@@ -28,4 +28,10 @@ public class NotificationQuitManager : MonoBehaviour
         
         Close();
     }
+
+
+    public void UnpauseMainS()
+    {
+        gameManager.MainS.UnPause();
+    }
 }

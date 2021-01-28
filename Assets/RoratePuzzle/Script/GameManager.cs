@@ -24,12 +24,10 @@ public class GameManager : MonoBehaviour
 
     public NotificationBackManager notificationBackManager;
     public NotificationQuitManager notificationQuitManager;
-    public AudioClip winS1;
+    public AudioClip winS;
     public AudioClip loseS;
-    public AudioClip winS2;
     public AudioSource GameS;
     public AudioSource MainS;
-    public AudioSource SoundWIN;
     public void Start()
     {
         
@@ -89,9 +87,8 @@ public class GameManager : MonoBehaviour
         //AudioManager.GetInstance().PlaySound(34);
         PlayerPrefs.SetInt("RoratePuzzle", 1);
         PlayerPrefs.Save();
-        MainS.volume = 0.02f;
-        SoundWIN.PlayOneShot(winS2);
-        GameS.PlayOneShot(winS1);
+        MainS.Pause();
+        GameS.PlayOneShot(winS);
         timer.timecountdown.Stop();
         TextWin_lose.text = "...勝利!";
         TextWin_lose.color = new Color32(198, 129, 22, 255);
@@ -114,7 +111,8 @@ public class GameManager : MonoBehaviour
     public void setLose()
     {
         //AudioManager.GetInstance().PlaySound(35);
-        MainS.volume = 0.02f;
+        timer.timecountdown.Stop();
+        MainS.Pause();
         GameS.PlayOneShot(loseS);
         timer.timeReady = true;
         TextWin_lose.text = "...敗北!";
@@ -127,23 +125,21 @@ public class GameManager : MonoBehaviour
 
     public void Replay()
     {
-        MainS.volume = mainManager.getAudioManagerVolume();
+        MainS.volume = mainManager.getAudioManagerVolume()/3;
         Start();
         GameS.Stop();
-        SoundWIN.Stop();
     }
 
     public void Back()
     {
         GameS.Pause();
-        SoundWIN.Pause();
         timer.isPause = true;
         notificationBackManager.Open();
     }
 
     public void　StartGame()
     {
-        MainS.volume = 0.02f;
+        MainS.volume = mainManager.getAudioManagerVolume() / 4;
         timer.timeReady = false;
         timer.isPause = false;
         FlagRorate = true;
