@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Options_Asset/Scenes/OptionScene.unity
     guid: 19d74001a4a5dc3449d56642891af325
   - enabled: 1
+    path: Assets/Scenes/OpeningScene.unity
+    guid: c7365ec8cf85bfb479f0a85f1703271e
+  - enabled: 1
     path: Assets/Scenes/GenjitsuScene.unity
     guid: d23f87c69b9617a478058e14ec98f792
   - enabled: 1
