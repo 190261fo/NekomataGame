@@ -32,7 +32,8 @@ public class ChangeScene : MonoBehaviour
         PlayerPrefs.DeleteKey("RoratePuzzle");
         PlayerPrefs.DeleteKey("Tyouchin");
         PlayerPrefs.DeleteKey("Scene");
-        ChangeGenjitsu();
+        // ChangeGenjitsu();
+        ChangeOpening();
     }
 
     public void ContinueGame_btn()
@@ -45,6 +46,14 @@ public class ChangeScene : MonoBehaviour
     {
         LoadLevel(SceneName);
     }
+
+    //オープニングシーンへ遷移
+    public void ChangeOpening()
+    {
+        LoadLevel("OpeningScene");
+    }
+
+
     // 現実世界 へ遷移
     public void ChangeGenjitsu()
     {
