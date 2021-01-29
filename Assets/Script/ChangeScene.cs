@@ -110,6 +110,30 @@ public class ChangeScene : MonoBehaviour
         LoadLevel("EndingScene");
     }
 
+    //ミニゲームモードシーンへ遷移
+    public void ChangeMiniGameMode()
+    {
+        LoadLevel("MiniGameScene");
+    }
+
+    //ミニゲームモード1へ遷移
+    public void ChangeMiniGameMode1()
+    {
+        LoadLevel("miniTyouchinLightsOut");
+    }
+
+    //ミニゲームモード2へ遷移
+    public void ChangeMiniGameMode2()
+    {
+        LoadLevel("miniTsumu");
+    }
+
+    //ミニゲームモード3へ遷移
+    public void ChangeMiniGameMode3()
+    {
+        LoadLevel("miniRoratePuzzle");
+    }
+
     void LoadLevel(string name)
     {
         // フェードイン
