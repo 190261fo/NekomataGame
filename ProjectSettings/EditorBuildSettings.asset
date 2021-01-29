@@ -21,18 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/IsekaiScene.unity
     guid: 6e2abfc71786db645a630cc5a4120491
   - enabled: 1
-    path: Assets/MiniGameScenes/MiniGameScene.unity
-    guid: be3a3a9d48c928d4dadb7c29c559813f
-  - enabled: 1
-    path: Assets/MiniGameScenes/miniRoratePuzzle.unity
-    guid: 51210248a8ef0574bbe7f1516cf38d65
-  - enabled: 1
-    path: Assets/MiniGameScenes/miniTsumu.unity
-    guid: 64f36b7e08b7fc248aa00b8dfc9c9918
-  - enabled: 1
-    path: Assets/MiniGameScenes/miniTyouchinLightsOut.unity
-    guid: 9741c3028f3f905478e4a8b0c517da1f
-  - enabled: 1
     path: Assets/TyouchinAssets/Scenes/TyouchinLightsOut.unity
     guid: a858dfcdb2ba7e24bb31c054744dd950
   - enabled: 1
@@ -44,4 +32,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
     guid: ca128fceffad61040b9ad8d7923a341a
+  - enabled: 1
+    path: Assets/MiniGameScenes/MiniGameScene.unity
+    guid: be3a3a9d48c928d4dadb7c29c559813f
+  - enabled: 1
+    path: Assets/MiniGameScenes/miniRoratePuzzle.unity
+    guid: 51210248a8ef0574bbe7f1516cf38d65
+  - enabled: 1
+    path: Assets/MiniGameScenes/miniTsumu.unity
+    guid: 64f36b7e08b7fc248aa00b8dfc9c9918
+  - enabled: 1
+    path: Assets/MiniGameScenes/miniTyouchinLightsOut.unity
+    guid: 9741c3028f3f905478e4a8b0c517da1f
   m_configObjects: {}
