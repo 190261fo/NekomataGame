@@ -1084,6 +1084,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1043883428, guid: be8dd76440b59f2408d0e8944e3865b7, type: 3}
+      propertyPath: m_Text
+      value: "\u7D42\u308F\u308B"
+      objectReference: {fileID: 0}
     - target: {fileID: 1050807624, guid: be8dd76440b59f2408d0e8944e3865b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
