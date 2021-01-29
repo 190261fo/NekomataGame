@@ -9,6 +9,7 @@ public class ChangeScene : MonoBehaviour
 {
     public  static int CheckBack = 0;
     public DataManager dataManager;
+    public NotificationGameManager notification;
     public Fade fade;
     // public Boolean FadeStart = true;
     // public Boolean Flag_RorateGame = false;
@@ -24,21 +25,22 @@ public class ChangeScene : MonoBehaviour
     public void NewGame_btn()
     {
         //Tsumu,RoratePuzzle,Tyouchin
-        PlayerPrefs.DeleteKey("p_x");
-        PlayerPrefs.DeleteKey("p_y");
-        PlayerPrefs.DeleteKey("Load");
-        PlayerPrefs.DeleteKey("Saved");
-        PlayerPrefs.DeleteKey("Tsumu");
-        PlayerPrefs.DeleteKey("RoratePuzzle");
-        PlayerPrefs.DeleteKey("Tyouchin");
-        PlayerPrefs.DeleteKey("Scene");
+        dataManager.DeleteData();
         // ChangeGenjitsu();
         ChangeOpening();
     }
 
     public void ContinueGame_btn()
     {
-        ChangeMap(PlayerPrefs.GetString("Scene"));
+        if(PlayerPrefs.GetString("Scene") == "")
+        {
+            notification.Open();
+        }
+        else
+        {
+            ChangeMap(PlayerPrefs.GetString("Scene"));
+        }
+        
     }
 
 
