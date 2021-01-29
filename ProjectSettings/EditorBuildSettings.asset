@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/TsumuAssets/Scenes/Tsumu.unity
     guid: 4ba3f852c54c24ecca5d6a8b40bd5d04
   - enabled: 1
-    path: Assets/Script/RoratePuzzle/Scenes/RoratePuzzle.unity
+    path: Assets/RoratePuzzle/Scenes/RoratePuzzle.unity
     guid: e4bc9f39b18cc5b4a8d3c74a02058d87
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
