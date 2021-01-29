@@ -504,7 +504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856838317}
   m_Layer: 0
-  m_Name: Setsumei
+  m_Name: Story
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1084,14 +1084,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1043883428, guid: be8dd76440b59f2408d0e8944e3865b7, type: 3}
-      propertyPath: m_Text
-      value: "\u7D42\u308F\u308B"
-      objectReference: {fileID: 0}
     - target: {fileID: 1050807624, guid: be8dd76440b59f2408d0e8944e3865b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 409803355}
+    - target: {fileID: 1851484432, guid: be8dd76440b59f2408d0e8944e3865b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 409803355}
+    - target: {fileID: 1851484432, guid: be8dd76440b59f2408d0e8944e3865b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeMinigame1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851484432, guid: be8dd76440b59f2408d0e8944e3865b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeScene, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 336640236286272745, guid: be8dd76440b59f2408d0e8944e3865b7,
         type: 3}
       propertyPath: main

@@ -589,12 +589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &794227719 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 471565801522665026, guid: 787e8516e5b274843ada6d46180a94ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 1891727093}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963298673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,8 +1067,6 @@ GameObject:
   - component: {fileID: 1688767410}
   - component: {fileID: 1688767409}
   - component: {fileID: 1688767403}
-  - component: {fileID: 1688767414}
-  - component: {fileID: 1688767413}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1108,8 +1100,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1688767381}
-  selectedCommands:
-  - {fileID: 1688767403}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1194,8 +1185,6 @@ MonoBehaviour:
   - {fileID: 1688767392}
   - {fileID: 1688767391}
   - {fileID: 1688767390}
-  - {fileID: 1688767414}
-  - {fileID: 1688767413}
   suppressAllAutoSelections: 0
 --- !u!114 &1688767382
 MonoBehaviour:
@@ -1914,52 +1903,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1688767413
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688767378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 33
-  indentLevel: 0
-  description: "\u30BF\u30A4\u30C8\u30EB\u3078\u623B\u308B"
-  targetObject: {fileID: 794227719}
-  targetComponentAssemblyName: ChangeScene, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ChangeScene
-  targetMethod: ChangeTitle
-  targetMethodText: 'ChangeTitle (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1688767414
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688767378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 32
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 5
-  durationOLD: 0
 --- !u!1001 &1891727093
 PrefabInstance:
   m_ObjectHideFlags: 0
