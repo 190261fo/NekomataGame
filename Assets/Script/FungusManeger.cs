@@ -28,7 +28,7 @@ public class FungusManeger : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Tyouchin") == 1)
         {
-            flowchart.SetBooleanVariable("Kappai_clear",true);
+            flowchart.SetBooleanVariable("Kappa_clear",true);
             
         }
 
