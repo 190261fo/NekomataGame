@@ -24,6 +24,9 @@ public class BlockManager: MonoBehaviour {
 	ScoreManager scoreManager;
 	FeverManager feverManager;
 
+    public Fade fade;
+
+
 	void Start () {
 		scoreManager = gameObject.AddComponent<ScoreManager> ();
 		feverManager = gameObject.AddComponent<FeverManager> ();
@@ -113,8 +116,20 @@ public class BlockManager: MonoBehaviour {
 			} else {
       			resultText.text = "クリア失敗";
 			}
+			Invoke("Isekai", 3.0f);
     	}
   	}
+	
+	// ミニゲーム後の遷移
+	void Isekai()
+	{
+		// フェードイン
+		fade.FadeIn(1.3f, () =>
+		{
+			// フェードイン完了後の処理（画面は真っ暗）
+			SceneManager.LoadScene("IsekaiScene"); //　シーン遷移
+		});
+	}
 
 	IEnumerator GenerateBlocks(int n){
 		for (int i = 0; i < n; i++) {

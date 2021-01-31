@@ -188,6 +188,7 @@ public class TyouchiLightsOutMain : MonoBehaviour
 		Invoke("Isekai", 2.0f);
 	}
 
+	// ミニゲーム後の遷移
 	void Isekai()
 	{
 		// フェードイン

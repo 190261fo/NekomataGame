@@ -46,3 +46,4 @@ MonoBehaviour:
   blockPrefab: {fileID: 1280329824221164, guid: 1e182b5407bb24471a26032582617fda,
     type: 3}
   bombPrefab: {fileID: 1378005656373068, guid: ef0f0fb18e0e54ac9b5ac5dc34652997, type: 3}
+  fade: {fileID: 0}
