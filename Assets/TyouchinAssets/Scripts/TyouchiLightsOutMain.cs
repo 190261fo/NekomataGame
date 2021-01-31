@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using Fungus;
+using UnityEngine.SceneManagement;
 
 public class TyouchiLightsOutMain : MonoBehaviour
 {
@@ -31,7 +31,8 @@ public class TyouchiLightsOutMain : MonoBehaviour
 	bool[,] lightStatus;
 	GameObject[,] lightObjects;
 
-    public Flowchart flowchart1;
+    public Fade fade;
+
 
     //ランダムに問題を生成する処理
     public void CreateProblem()
@@ -180,8 +181,21 @@ public class TyouchiLightsOutMain : MonoBehaviour
 		}
 		AudioManager.GetInstance().PlaySound(6);
 		clearText.enabled = true;
+		
 		PlayerPrefs.SetInt("Tyouchin", 1);
 		PlayerPrefs.Save();
+		
+		Invoke("Isekai", 2.0f);
+	}
+
+	void Isekai()
+	{
+		// フェードイン
+		fade.FadeIn(1.3f, () =>
+		{
+			// フェードイン完了後の処理（画面は真っ暗）
+			SceneManager.LoadScene("IsekaiScene"); //　シーン遷移
+		});
 	}
 
 	//ライトの色設定処理
