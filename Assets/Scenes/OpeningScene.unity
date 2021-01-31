@@ -995,7 +995,6 @@ GameObject:
   - component: {fileID: 1459254120}
   - component: {fileID: 1459254141}
   - component: {fileID: 1459254144}
-  - component: {fileID: 1459254140}
   - component: {fileID: 1459254158}
   - component: {fileID: 1459254155}
   - component: {fileID: 1459254156}
@@ -1554,21 +1553,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1459254140
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459254119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: NewGame
-  value: 0
 --- !u!114 &1459254141
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1849,10 +1833,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1459254151}
-  selectedCommands:
-  - {fileID: 1459254144}
-  variables:
-  - {fileID: 1459254140}
+  selectedCommands: []
+  variables: []
   description: 
   stepPause: 0
   colorCommands: 1
