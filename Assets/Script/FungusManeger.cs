@@ -24,7 +24,7 @@ public class FungusManeger : MonoBehaviour
         }
     }
 
-    public void  KaiwaSceneFlag()
+    public void KaiwaSceneFlag()
     {
         if (PlayerPrefs.GetInt("Tyouchin") == 1)
         {

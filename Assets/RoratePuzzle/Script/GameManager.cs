@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     public AudioClip loseS;
     public AudioSource GameS;
     public AudioSource MainS;
+
+    public Fade fade;
+
     public void Start()
     {
         
@@ -93,6 +96,7 @@ public class GameManager : MonoBehaviour
         TextWin_lose.text = "...勝利!";
         TextWin_lose.color = new Color32(198, 129, 22, 255);
         animatorTextWinLose.SetBool("isOpen", true);
+
         蛇パズル_背景.GetComponent<SpriteRenderer>().color = new Color32(82, 56, 27, 255);
         foreach (GameObject pic in a_k_s)
         {
@@ -103,10 +107,24 @@ public class GameManager : MonoBehaviour
             pic.GetComponent<SpriteRenderer>().color = new Color32(0, 0, 0, 0);
         }
         animatorImageWIN.SetBool("IsOpen", true);
+        
+        // ↓ 勝利したら"ゲームをやめるかどうか"を尋ねずに、画面遷移したい
+        // notificationQuitManager.Open();
 
-        notificationQuitManager.Open();
-
+        // ↓簡易の画面遷移関数
+        Invoke("Isekai", 3.0f);
     }
+
+    //↓簡易の画面遷移関数
+    void Isekai()
+	{
+		// フェードイン
+		fade.FadeIn(1.3f, () =>
+		{
+			// フェードイン完了後の処理（画面は真っ暗）
+			SceneManager.LoadScene("IsekaiScene"); //　シーン遷移
+		});
+	}
 
     public void setLose()
     {
