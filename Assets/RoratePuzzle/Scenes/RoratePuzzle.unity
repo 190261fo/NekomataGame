@@ -10321,6 +10321,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Script
       objectReference: {fileID: 0}
+    - target: {fileID: 4384673844169988595, guid: 787e8516e5b274843ada6d46180a94ec,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 330342080}
     - target: {fileID: 7158069957253758013, guid: 787e8516e5b274843ada6d46180a94ec,
         type: 3}
       propertyPath: m_RootOrder
