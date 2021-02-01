@@ -6381,7 +6381,6 @@ GameObject:
   - component: {fileID: 580626795}
   - component: {fileID: 580626794}
   - component: {fileID: 580626793}
-  - component: {fileID: 580626792}
   - component: {fileID: 580626809}
   - component: {fileID: 580626808}
   - component: {fileID: 580626810}
@@ -6389,6 +6388,8 @@ GameObject:
   - component: {fileID: 580626813}
   - component: {fileID: 580626812}
   - component: {fileID: 580626814}
+  - component: {fileID: 580626815}
+  - component: {fileID: 580626792}
   m_Layer: 0
   m_Name: WarpZone
   m_TagString: Untagged
@@ -8101,10 +8102,11 @@ MonoBehaviour:
   - {fileID: 580626796}
   - {fileID: 580626795}
   - {fileID: 580626811}
+  - {fileID: 580626815}
   - {fileID: 580626794}
-  - {fileID: 580626792}
   - {fileID: 580626793}
   - {fileID: 580626759}
+  - {fileID: 580626792}
   - {fileID: 580626810}
   - {fileID: 580626716}
   - {fileID: 580626808}
@@ -8133,8 +8135,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 580626740}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 580626705}
@@ -8658,7 +8659,7 @@ MonoBehaviour:
   shiftOffset: {x: 0, y: 0}
   move: 0
   shiftIntoPlace: 0
-  waitUntilFinished: 0
+  waitUntilFinished: 1
 --- !u!114 &580626760
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10064,11 +10065,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 193
+  itemId: 202
   indentLevel: 1
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 1
+    floatVal: 0.5
   durationOLD: 0
 --- !u!114 &580626793
 MonoBehaviour:
@@ -10407,10 +10408,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 179
   indentLevel: 1
-  duration: 2
+  duration: 1.5
   targetAlpha: 0
   waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeColor: {r: 1, g: 0.69803923, b: 0.27450982, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
 --- !u!114 &580626806
@@ -10448,7 +10449,7 @@ MonoBehaviour:
   duration: 0
   targetAlpha: 1
   waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeColor: {r: 1, g: 0.69417036, b: 0.27058828, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
 --- !u!114 &580626808
@@ -11293,6 +11294,24 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &580626815
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580626701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 201
+  indentLevel: 1
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
 --- !u!1 &584779775
 GameObject:
   m_ObjectHideFlags: 3
@@ -23064,7 +23083,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936713074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.884792, y: 7.500001, z: -10}
+  m_LocalPosition: {x: -8.888136, y: 7.500001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

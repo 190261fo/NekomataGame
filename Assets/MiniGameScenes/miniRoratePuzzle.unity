@@ -1776,7 +1776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17.500977, y: 11.550049}
+  m_AnchoredPosition: {x: -17.501038, y: 11.550049}
   m_SizeDelta: {x: -829.9536, y: -468.55844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &137904414
@@ -1874,7 +1874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17.500977, y: 11.550049}
+  m_AnchoredPosition: {x: -17.501038, y: 11.550049}
   m_SizeDelta: {x: -829.9536, y: -468.55844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &139220890
@@ -2082,10 +2082,11 @@ MonoBehaviour:
   BtnReplay: {fileID: 73814153}
   notificationBackManager: {fileID: 1354627055}
   notificationQuitManager: {fileID: 619083002}
-  winS: {fileID: 8300000, guid: 64112fa33221a5640b5d574ed2a76447, type: 3}
+  winS: {fileID: 8300000, guid: f60fc64d5d52a0c4d9de4764af1e45ef, type: 3}
   loseS: {fileID: 8300000, guid: 588f6666cc73fc441b6233e780ff6480, type: 3}
   GameS: {fileID: 170811725}
   MainS: {fileID: 519420030}
+  fade: {fileID: 0}
 --- !u!4 &170811724
 Transform:
   m_ObjectHideFlags: 0
