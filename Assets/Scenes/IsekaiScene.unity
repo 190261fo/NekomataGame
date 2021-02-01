@@ -56880,7 +56880,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 575
+  itemId: 651
   blockName: Yougo_exit
   description: "\u9589\u3058\u308B"
   eventHandler: {fileID: 0}
@@ -57644,7 +57644,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 575
+  itemId: 654
   blockName: Hinto_kappa
   description: "\u30AB\u30C3\u30D1\u306E\u30D2\u30F3\u30C8"
   eventHandler: {fileID: 0}
@@ -57698,7 +57698,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 575
+  itemId: 650
   blockName: Yougo_4
   description: "\u3054\u4E3B\u4EBA\u69D8\u306E\u3068\u3053\u308D\u3078\u5E30\u308B\u306B\u306F"
   eventHandler: {fileID: 0}
@@ -57730,7 +57730,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 575
+  itemId: 649
   blockName: Yougo_3
   description: "\u5996\u529B\u3068\u306F"
   eventHandler: {fileID: 0}
@@ -58335,7 +58335,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 575
+  itemId: 648
   blockName: Yougo_2
   description: "\u5927\u5996\u602A\u3068\u306F"
   eventHandler: {fileID: 0}
@@ -76225,7 +76225,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 280
+  itemId: 647
   blockName: Hitodama_chart8
   description: "\u30C6\u30F3\u30B0\u306E\u8A66\u7DF4\u3001\u8CA0\u3051\u305F\u5F8C"
   eventHandler: {fileID: 0}
@@ -76932,7 +76932,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 280
+  itemId: 646
   blockName: Hitodama_chart7
   description: "\u30B6\u30B7\u30AD\u30EF\u30E9\u30B7\u306E\u8A66\u7DF4\u3001\u8CA0\u3051\u305F\u5F8C"
   eventHandler: {fileID: 0}
@@ -77635,7 +77635,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 280
+  itemId: 645
   blockName: Hitodama_chart6
   description: "\u30B6\u30B7\u30AD\u30EF\u30E9\u30B7\u306E\u8A66\u7DF4\u3001\u8CA0\u3051\u305F\u5F8C"
   eventHandler: {fileID: 0}
@@ -79773,7 +79773,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 102
+  itemId: 653
   blockName: Hitodama_chart4_re
   description: "\u7528\u8A9E\u8AAC\u660E"
   eventHandler: {fileID: 0}
@@ -80386,7 +80386,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 102
+  itemId: 652
   blockName: Hitodama_chart3_re
   description: "\u7528\u8A9E\u8AAC\u660E"
   eventHandler: {fileID: 0}
@@ -98175,7 +98175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 536352207}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &1666376614
