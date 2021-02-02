@@ -187,6 +187,12 @@ public class ChangeScene : MonoBehaviour
             // 「O」クリックで 異世界 へ遷移
             SceneManager.LoadScene("OptionScene");
         }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            // 「E」クリックで 異世界 へ遷移
+            SceneManager.LoadScene("EndingScene");
+        }
+
 
     }
 
