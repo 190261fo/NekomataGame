@@ -102756,6 +102756,8 @@ MonoBehaviour:
   Youryoku_tengu: {fileID: 879868222}
   Youryoku_zashiki: {fileID: 755927956}
   neko: {fileID: 6628821988552922060}
+  animator: {fileID: 369339581}
+  animatorQuit: {fileID: 1314359299}
 --- !u!114 &1879324407
 MonoBehaviour:
   m_ObjectHideFlags: 0

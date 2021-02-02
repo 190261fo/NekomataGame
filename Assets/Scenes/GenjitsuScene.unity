@@ -81168,6 +81168,8 @@ MonoBehaviour:
   Youryoku_tengu: {fileID: 1870552641}
   Youryoku_zashiki: {fileID: 297675174}
   neko: {fileID: 1897925832460211801}
+  animator: {fileID: 1351023628}
+  animatorQuit: {fileID: 756288461}
 --- !u!1 &1653716010
 GameObject:
   m_ObjectHideFlags: 0
