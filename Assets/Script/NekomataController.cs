@@ -130,16 +130,20 @@ public class NekomataController : MonoBehaviour
         {
 
         }
-        if (PlayerPrefs.GetInt("nekoMove") == 1)
-        {
-        }
         else
-        { // 移動量を加算する
-            Vector2 position = rigidbody2d.position;
-            position.x = position.x + speed * horizontal * Time.deltaTime;
-            position.y = position.y + speed * vertical * Time.deltaTime;           
-            rigidbody2d.MovePosition(position);
-        }     
+        {
+            if (PlayerPrefs.GetInt("nekoMove") == 1)
+            {
+            }
+            else
+            { // 移動量を加算する
+                Vector2 position = rigidbody2d.position;
+                position.x = position.x + speed * horizontal * Time.deltaTime;
+                position.y = position.y + speed * vertical * Time.deltaTime;
+                rigidbody2d.MovePosition(position);
+            }
+        }
+        
     }
 
 
