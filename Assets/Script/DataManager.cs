@@ -105,6 +105,13 @@ namespace Assets.Script
             PlayerPrefs.Save();
         }
 
+        public void setMoveData()
+        {
+            PlayerPrefs.SetInt("nekoMove", 0);
+            PlayerPrefs.Save();
+            Debug.Log("move");
+        }
+
 
         //Tsumu,RoratePuzzle,Tyouchin
 
