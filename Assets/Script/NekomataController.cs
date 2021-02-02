@@ -25,6 +25,7 @@ public class NekomataController : MonoBehaviour
     //会話用
     public Flowchart flowchart1;
     public Flowchart flowchart2;
+    public  Boolean checkMove = false;
 
     //開始関数(update関数の前に1度だけ呼び出される)
     void Start()
@@ -84,7 +85,7 @@ public class NekomataController : MonoBehaviour
         // Time.deltaTime をかける　()　->
         // (毎秒10フレームの場合、各フレームには0.1秒。60フレームは、各0.017秒かかる)
         // レンダリングされたフレーム数に関係なく、キャラクターは同じ速度で実行される。現在は「フレーム非依存」
-
+        
         if (flowchart1.GetBooleanVariable("IsTalking") || flowchart2.GetBooleanVariable("IsTalking"))
         {
             //Debug.Log("Don't move!");
@@ -95,20 +96,31 @@ public class NekomataController : MonoBehaviour
         }
         else
         {
-            horizontal = Input.GetAxis("Horizontal");
-            vertical = Input.GetAxis("Vertical");
-
-            move = new Vector2(horizontal, vertical);
-
-            if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
+            if (PlayerPrefs.GetInt("nekoMove") == 1)
             {
-                lookDirection.Set(move.x, move.y);
-                lookDirection.Normalize();
+                
+                move = new Vector2(0, 0);
+                animator.SetFloat("Speed", move.magnitude);
+                Debug.Log("nomove");
             }
+            else
+            {
+                horizontal = Input.GetAxis("Horizontal");
+                vertical = Input.GetAxis("Vertical");
 
-            animator.SetFloat("Look X", lookDirection.x);
-            animator.SetFloat("Look Y", lookDirection.y);
-            animator.SetFloat("Speed", move.magnitude);
+                move = new Vector2(horizontal, vertical);
+
+                if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
+                {
+                    lookDirection.Set(move.x, move.y);
+                    lookDirection.Normalize();
+                }
+
+                animator.SetFloat("Look X", lookDirection.x);
+                animator.SetFloat("Look Y", lookDirection.y);
+                animator.SetFloat("Speed", move.magnitude);
+            }
+            
         }
     }
 
@@ -116,21 +128,18 @@ public class NekomataController : MonoBehaviour
     {
         if (flowchart1.GetBooleanVariable("IsTalking") || flowchart2.GetBooleanVariable("IsTalking"))
         {
+
+        }
+        if (PlayerPrefs.GetInt("nekoMove") == 1)
+        {
         }
         else
-        {
-            // 移動量を加算する
+        { // 移動量を加算する
             Vector2 position = rigidbody2d.position;
             position.x = position.x + speed * horizontal * Time.deltaTime;
             position.y = position.y + speed * vertical * Time.deltaTime;           
             rigidbody2d.MovePosition(position);
-
-
-
-
-        }
-
-        
+        }     
     }
 
 
@@ -138,7 +147,8 @@ public class NekomataController : MonoBehaviour
     {
         dataManager = FindObjectOfType<DataManager>();
         dataManager.SetLoad();
-
+        PlayerPrefs.SetInt("nekoMove", 0);
+        PlayerPrefs.Save();
     }
 
     public void PlayWalkSound() {
@@ -149,4 +159,16 @@ public class NekomataController : MonoBehaviour
         AudioManager.GetInstance().PlaySound(2);
     }
 
+    public  void setCheckMove(Boolean check)
+    {
+        checkMove = check;
+    }
+
+    public  Boolean getCheckMove() {
+        return checkMove;
+    }
+
+
+
+    
 }

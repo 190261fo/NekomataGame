@@ -102755,6 +102755,7 @@ MonoBehaviour:
   Youryoku_kappa: {fileID: 207847328}
   Youryoku_tengu: {fileID: 879868222}
   Youryoku_zashiki: {fileID: 755927956}
+  neko: {fileID: 6628821988552922060}
 --- !u!114 &1879324407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113054,6 +113055,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6628821988552922058}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6628821988552922060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6628821988239458104, guid: c3ef7358d106cbe4f8e5078bdc242b98,
+    type: 3}
+  m_PrefabInstance: {fileID: 6628821988552922058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628821988552922059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c90552378c0181488038072458368e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7026781476263370635 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,

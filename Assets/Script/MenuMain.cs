@@ -10,6 +10,7 @@ public class MenuMain : MonoBehaviour
     public GameObject Youryoku_kappa;
     public GameObject Youryoku_tengu;
     public GameObject Youryoku_zashiki;
+    public   NekomataController neko;
     // Update is called once per frame
     void Update()
     {
@@ -41,16 +42,22 @@ public class MenuMain : MonoBehaviour
         }
     }
 
-    private void Pause()
+    private  void Pause()
     {
         MenuUI.SetActive(true);
         IsMenu = true;
+        PlayerPrefs.SetInt("nekoMove", 1);
+        PlayerPrefs.Save();
+        Debug.Log(PlayerPrefs.GetInt("nekoMove"));
     }
 
     private void Resume()
     {
         MenuUI.SetActive(false);
         IsMenu = false;
+        PlayerPrefs.SetInt("nekoMove", 2);
+        PlayerPrefs.Save();
+        Debug.Log(PlayerPrefs.GetInt("nekoMove"));
     }
 
     public void setMenuUIActive(Boolean x)
