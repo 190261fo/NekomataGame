@@ -4751,114 +4751,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 245671682}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &248043723
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 499978086}
-    m_Modifications:
-    - target: {fileID: 779407993517221514, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_Name
-      value: fungus_Youryoku_kappa
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: portraits.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: setSayDialog
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: nameText
-      value: Youryoku_kappa
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: portraits.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: fd7b3a73f91f59342b57c69af587c1e6,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ded3f5f3c8c9c104ba574b8f985b0604, type: 3}
---- !u!4 &248043724 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-    type: 3}
-  m_PrefabInstance: {fileID: 248043723}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &248043725 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-    type: 3}
-  m_PrefabInstance: {fileID: 248043723}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &253633519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47213,9 +47105,9 @@ Transform:
   - {fileID: 991667686781477295}
   - {fileID: 1912443279420884756}
   - {fileID: 1756061146576774675}
-  - {fileID: 248043724}
-  - {fileID: 1868224987}
-  - {fileID: 2128076607}
+  - {fileID: 779407993345769024}
+  - {fileID: 779407992833146705}
+  - {fileID: 779407993076087221}
   - {fileID: 1315423872}
   - {fileID: 5316711569812900161}
   - {fileID: 1391042169}
@@ -51633,7 +51525,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -18.5, y: -18.962}
-  m_SizeDelta: {x: 69.76992, y: 26.970497}
+  m_SizeDelta: {x: 80, y: 26.970497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746710998
 MonoBehaviour:
@@ -53913,10 +53805,15 @@ GameObject:
   - component: {fileID: 844589207}
   - component: {fileID: 844589209}
   - component: {fileID: 844589211}
-  - component: {fileID: 844589214}
   - component: {fileID: 844589213}
-  - component: {fileID: 844589212}
   - component: {fileID: 844589210}
+  - component: {fileID: 844589215}
+  - component: {fileID: 844589217}
+  - component: {fileID: 844589216}
+  - component: {fileID: 844589219}
+  - component: {fileID: 844589218}
+  - component: {fileID: 844589214}
+  - component: {fileID: 844589212}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -54421,7 +54318,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -491.0292
     y: 540.35156
-    width: 79
+    width: 78.57143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -54953,7 +54850,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 274.8487
     y: 584.03094
-    width: 126
+    width: 123.62637
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -55484,7 +55381,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 270.0912
     y: 303.03738
-    width: 175
+    width: 170.87912
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -56016,7 +55913,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 303.92856
     y: 24.357046
-    width: 126
+    width: 123.62637
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -56070,19 +55967,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 339.6938, y: -329.29742}
+  scrollPos: {x: -308.4721, y: 295.48376}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 410
-  zoom: 1
+  blockViewHeight: 280
+  zoom: 0.91
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 844589024}
+  selectedCommands:
+  - {fileID: 844589023}
   variables:
   - {fileID: 844588888}
   - {fileID: 844589172}
@@ -56387,7 +56286,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -13.17277
     y: 304.84235
-    width: 111
+    width: 109.34065
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -56397,7 +56296,9 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 844589286}
+  - {fileID: 844589217}
   - {fileID: 844589291}
+  - {fileID: 844589216}
   - {fileID: 844588863}
   - {fileID: 844588789}
   - {fileID: 844588868}
@@ -56587,7 +56488,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -324.02136
     y: 31.325893
-    width: 146
+    width: 144.5055
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -57109,7 +57010,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -516.0915
     y: 29.931145
-    width: 130
+    width: 128.02197
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -57161,7 +57062,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -119.23358
     y: 369.95465
-    width: 120
+    width: 118.13187
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -57221,7 +57122,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 42.409664
     y: 222.62256
-    width: 99
+    width: 97.25275
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -57253,7 +57154,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 40.708313
     y: 156.37407
-    width: 99
+    width: 97.25275
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -57264,6 +57165,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 844589288}
   - {fileID: 844589293}
+  - {fileID: 844589215}
   - {fileID: 844588865}
   suppressAllAutoSelections: 0
 --- !u!114 &844588887
@@ -58036,7 +57938,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 39.1968
     y: 94.21991
-    width: 98
+    width: 96.15384
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -60407,7 +60309,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 349.15173
     y: 677.9553
-    width: 114
+    width: 111.53846
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -60442,7 +60344,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 207.26965
     y: 681.8189
-    width: 111
+    width: 109.34065
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -60459,9 +60361,10 @@ MonoBehaviour:
   - {fileID: 844589151}
   - {fileID: 844589159}
   - {fileID: 844589158}
+  - {fileID: 844589212}
   - {fileID: 844589157}
   - {fileID: 844589156}
-  - {fileID: 844589212}
+  - {fileID: 844589214}
   - {fileID: 844589149}
   - {fileID: 844589148}
   - {fileID: 844589150}
@@ -60584,7 +60487,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 374.5422
     y: 114.18229
-    width: 114
+    width: 111.53846
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -60645,7 +60548,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 233.84691
     y: 114.2421
-    width: 111
+    width: 109.34065
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -60663,9 +60566,10 @@ MonoBehaviour:
   - {fileID: 844589113}
   - {fileID: 844589101}
   - {fileID: 844589100}
+  - {fileID: 844589209}
   - {fileID: 844589099}
   - {fileID: 844589112}
-  - {fileID: 844589209}
+  - {fileID: 844589211}
   - {fileID: 844589111}
   - {fileID: 844589107}
   - {fileID: 844589110}
@@ -60677,7 +60581,6 @@ MonoBehaviour:
   - {fileID: 844588880}
   - {fileID: 844589037}
   - {fileID: 844589084}
-  - {fileID: 844589211}
   - {fileID: 844589075}
   - {fileID: 844588934}
   suppressAllAutoSelections: 0
@@ -60724,7 +60627,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 362.13593
     y: 394.30286
-    width: 163
+    width: 158.7912
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -60785,7 +60688,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 184.204
     y: 395.94208
-    width: 160
+    width: 156.59341
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -60801,9 +60704,10 @@ MonoBehaviour:
   - {fileID: 844589049}
   - {fileID: 844589048}
   - {fileID: 844589047}
+  - {fileID: 844589219}
   - {fileID: 844589046}
   - {fileID: 844589062}
-  - {fileID: 844589214}
+  - {fileID: 844589218}
   - {fileID: 844589057}
   - {fileID: 844589060}
   - {fileID: 844589059}
@@ -65114,7 +65018,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 617.9659
     y: 735.2509
-    width: 111
+    width: 109.34065
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -65144,7 +65048,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 488.12125
     y: 735.28564
-    width: 117
+    width: 115.93407
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -65647,7 +65551,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 39.11722
     y: 27.858486
-    width: 97
+    width: 95.05495
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -66609,7 +66513,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -322.1806
     y: 377.18365
-    width: 145
+    width: 143.40659
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -68222,7 +68126,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -120.22693
     y: 482.30643
-    width: 121
+    width: 119.23077
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -68341,7 +68245,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -120.36072
     y: 427.10797
-    width: 126
+    width: 123.62637
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -68398,7 +68302,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -326.04834
     y: 139.82983
-    width: 146
+    width: 144.5055
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -69191,7 +69095,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 604.3287
     y: 191.07014
-    width: 111
+    width: 109.34065
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -69389,7 +69293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 199
   indentLevel: 0
-  storyText: "\u304A\u3046\u3001\u3044\u3044\u305D\uFF5E\n\n\u304C\u3093\u3070\u308C\u3088\uFF5E\uFF01"
+  storyText: "\u304A\u3046\u3001\u3044\u3044\u305E\uFF5E\n\n\u304C\u3093\u3070\u308C\u3088\uFF5E\uFF01"
   description: 
   character: {fileID: 1912443279420884755}
   portrait: {fileID: 21300000, guid: fbe95adc8e9bb9045a4101bf4dd12fec, type: 3}
@@ -69418,7 +69322,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 478.11218
     y: 192.82332
-    width: 117
+    width: 115.93407
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -69631,7 +69535,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 617.94775
     y: 471.35727
-    width: 160
+    width: 156.59341
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -69858,7 +69762,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 439.62195
     y: 472.713
-    width: 166
+    width: 163.18681
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -71659,7 +71563,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 525.95337
     y: 25.0914
-    width: 126
+    width: 123.62637
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -72254,7 +72158,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 528.70123
     y: 299.85196
-    width: 175
+    width: 170.87912
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -74420,7 +74324,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 550.0925
     y: 583.14825
-    width: 126
+    width: 123.62637
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -77938,7 +77842,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -322.90305
     y: 276.5333
-    width: 145
+    width: 143.40659
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -78259,7 +78163,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 26.871288
     y: 482.74838
-    width: 129
+    width: 128.02197
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -78292,7 +78196,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 23.1978
     y: 428.10553
-    width: 137
+    width: 134.61539
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -78325,7 +78229,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 25.646755
     y: 368.9221
-    width: 132
+    width: 130.21979
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -78490,7 +78394,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -321.66376
     y: 477.99637
-    width: 145
+    width: 143.40659
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -78525,7 +78429,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 248043725}
+  character: {fileID: 779407993345769031}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: fd7b3a73f91f59342b57c69af587c1e6, type: 3}
   offset: 0
@@ -78536,8 +78440,8 @@ MonoBehaviour:
   fadeDuration: 0.5
   moveDuration: 1
   shiftOffset: {x: 0, y: 0}
-  move: 1
-  shiftIntoPlace: 1
+  move: 0
+  shiftIntoPlace: 0
   waitUntilFinished: 0
 --- !u!114 &844589210
 MonoBehaviour:
@@ -78555,7 +78459,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 2
   stage: {fileID: 0}
-  character: {fileID: 2128076608}
+  character: {fileID: 779407993076087218}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 0}
   offset: 0
@@ -78585,18 +78489,18 @@ MonoBehaviour:
   indentLevel: 0
   display: 2
   stage: {fileID: 0}
-  character: {fileID: 248043725}
+  character: {fileID: 779407993345769031}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 0}
   offset: 0
   fromPosition: {fileID: 0}
-  toPosition: {fileID: 1315423868}
+  toPosition: {fileID: 0}
   facing: 0
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
   shiftOffset: {x: 0, y: 0}
-  move: 1
+  move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
 --- !u!114 &844589212
@@ -78611,11 +78515,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 754
+  itemId: 762
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 2128076608}
+  character: {fileID: 779407993076087218}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: 76e9ef6632be5164cb215d116040d89a, type: 3}
   offset: 0
@@ -78626,8 +78530,8 @@ MonoBehaviour:
   fadeDuration: 0.5
   moveDuration: 1
   shiftOffset: {x: 0, y: 0}
-  move: 1
-  shiftIntoPlace: 1
+  move: 0
+  shiftIntoPlace: 0
   waitUntilFinished: 0
 --- !u!114 &844589213
 MonoBehaviour:
@@ -78645,7 +78549,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 2
   stage: {fileID: 0}
-  character: {fileID: 1868224988}
+  character: {fileID: 779407992833146710}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 0}
   offset: 0
@@ -78671,11 +78575,152 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 752
+  itemId: 761
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 779407993076087218}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &844589215
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844588787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 756
+  indentLevel: 0
+  storyText: "\u3061\u306A\u307F\u306B\u3001\u300CM\u300D\u30AD\u30FC\u3092\u62BC\u3059\u3068\n\u30CD\u30B3\u30DE\u30BF\u304C\u4ECA\u6301\u3063\u3066\u308B\u5996\u529B\u306E\u6570\u304C\u308F\u304B\u308B\u304B\u3089\u306D\uFF01\n\u6700\u521D\u306F\u3001\u304B\u3089\u3063\u307D\u306E\u5668\u3092\uFF13\u3064\u6301\u3063\u3066\u308B\u3088\uFF5E"
+  description: 
+  character: {fileID: 7026781476263370635}
+  portrait: {fileID: 21300000, guid: f70782f2c1661ac479d71becb156cac5, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 5316711569812900166}
+--- !u!114 &844589216
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844588787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 758
+  indentLevel: 0
+  storyText: "\u305D\u308C\u3058\u3083\u3042\u3001\u6C17\u3092\u4ED8\u3051\u3066\uFF01"
+  description: 
+  character: {fileID: 7026781476263370635}
+  portrait: {fileID: 21300000, guid: f70782f2c1661ac479d71becb156cac5, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 5316711569812900166}
+--- !u!114 &844589217
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844588787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 757
+  indentLevel: 0
+  storyText: "\u308F\u304B\u3063\u305F\uFF01\n\n\u307E\u305F\u4F55\u304B\u77E5\u308A\u305F\u304F\u306A\u3063\u305F\u3089\u58F0\u3092\u304B\u3051\u3066\u306D\uFF5E"
+  description: 
+  character: {fileID: 7026781476263370635}
+  portrait: {fileID: 21300000, guid: f70782f2c1661ac479d71becb156cac5, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 5316711569812900166}
+--- !u!114 &844589218
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844588787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 760
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 779407992833146710}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &844589219
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844588787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 759
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 1868224988}
+  character: {fileID: 779407992833146710}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: c7b906939ecff0243b4ba1b95955b640, type: 3}
   offset: 0
@@ -78686,8 +78731,8 @@ MonoBehaviour:
   fadeDuration: 0.5
   moveDuration: 1
   shiftOffset: {x: 0, y: 0}
-  move: 1
-  shiftIntoPlace: 1
+  move: 0
+  shiftIntoPlace: 0
   waitUntilFinished: 0
 --- !u!114 &844589228
 MonoBehaviour:
@@ -78705,7 +78750,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -325.9082
     y: 203.32907
-    width: 145
+    width: 143.40659
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -80652,7 +80697,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -185.53557
     y: -114.22383
-    width: 153
+    width: 151.0989
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -81280,7 +81325,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -143.95732
     y: 26.268848
-    width: 162
+    width: 160.98901
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -81452,7 +81497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 591
   indentLevel: 0
-  storyText: "\u308F\u304B\u3063\u305F\uFF01\n\n\u307E\u305F\u4F55\u304B\u77E5\u308A\u305F\u304F\u306A\u3063\u305F\u3089\u58F0\u3092\u304B\u3051\u3066\u306D\uFF5E"
+  storyText: "\u3061\u306A\u307F\u306B\u3001\u300CM\u300D\u30AD\u30FC\u3092\u62BC\u3059\u3068\n\u5996\u529B\u306E\u78BA\u8A8D\u3001\u300C\u30BB\u30FC\u30D6\u300D\u3084\u300C\u30ED\u30FC\u30C9\u300D\u3001\n\u305D\u308C\u3068\u3001\u30B2\u30FC\u30E0\u3092\u9014\u4E2D\U0001F450\u3067\u3084\u3081\u308B\u3053\u3068\u3082\u3067\u304D\u308B\u304B\u3089\u306D\uFF01"
   description: 
   character: {fileID: 7026781476263370635}
   portrait: {fileID: 21300000, guid: f70782f2c1661ac479d71becb156cac5, type: 3}
@@ -92759,7 +92804,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17.500992, y: 11.550049}
+  m_AnchoredPosition: {x: -17.500977, y: 11.550049}
   m_SizeDelta: {x: -829.9536, y: -468.55844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1333364222
@@ -102240,114 +102285,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 32.573204, y: 1}
   m_EdgeRadius: 0
---- !u!1001 &1868224986
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 499978086}
-    m_Modifications:
-    - target: {fileID: 779407993517221514, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_Name
-      value: fungus_Youryoku_zashiki
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: portraits.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: setSayDialog
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: nameText
-      value: Youryoku_zashiki
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: portraits.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: c7b906939ecff0243b4ba1b95955b640,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ded3f5f3c8c9c104ba574b8f985b0604, type: 3}
---- !u!4 &1868224987 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-    type: 3}
-  m_PrefabInstance: {fileID: 1868224986}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1868224988 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-    type: 3}
-  m_PrefabInstance: {fileID: 1868224986}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1869351786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110578,114 +110515,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2125374793}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2128076606
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 499978086}
-    m_Modifications:
-    - target: {fileID: 779407993517221514, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_Name
-      value: fungus_Youryoku_tengu
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: portraits.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: setSayDialog
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: nameText
-      value: Youryoku_tengu
-      objectReference: {fileID: 0}
-    - target: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-        type: 3}
-      propertyPath: portraits.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 76e9ef6632be5164cb215d116040d89a,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ded3f5f3c8c9c104ba574b8f985b0604, type: 3}
---- !u!4 &2128076607 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 779407993517221515, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-    type: 3}
-  m_PrefabInstance: {fileID: 2128076606}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2128076608 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 779407993517221516, guid: ded3f5f3c8c9c104ba574b8f985b0604,
-    type: 3}
-  m_PrefabInstance: {fileID: 2128076606}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2130349358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111041,6 +110870,159 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2142526514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &779407992833146704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779407992833146705}
+  - component: {fileID: 779407992833146710}
+  m_Layer: 0
+  m_Name: fungus_Youryoku_zashiki
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &779407992833146705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779407992833146704}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499978086}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &779407992833146710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779407992833146704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: 
+  nameColor: {r: 0.13333334, g: 0.105882354, b: 0.24705882, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: c7b906939ecff0243b4ba1b95955b640, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 5316711569812900166}
+  description: 
+--- !u!114 &779407993076087218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779407993076087220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: 
+  nameColor: {r: 0.13333334, g: 0.105882354, b: 0.24705882, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 76e9ef6632be5164cb215d116040d89a, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 5316711569812900166}
+  description: 
+--- !u!1 &779407993076087220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779407993076087221}
+  - component: {fileID: 779407993076087218}
+  m_Layer: 0
+  m_Name: fungus_Youryoku_tengu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &779407993076087221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779407993076087220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499978086}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &779407993345769024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779407993345769025}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499978086}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &779407993345769025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779407993345769024}
+  - component: {fileID: 779407993345769031}
+  m_Layer: 0
+  m_Name: fungus_Youryoku_kappa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &779407993345769031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779407993345769025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: 
+  nameColor: {r: 0.13333334, g: 0.105882354, b: 0.24705882, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: fd7b3a73f91f59342b57c69af587c1e6, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 5316711569812900166}
+  description: 
 --- !u!1001 &895789910873500202
 PrefabInstance:
   m_ObjectHideFlags: 0
