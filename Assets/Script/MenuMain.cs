@@ -11,11 +11,12 @@ public class MenuMain : MonoBehaviour
     public GameObject Youryoku_tengu;
     public GameObject Youryoku_zashiki;
     public   NekomataController neko;
+    public Animator animator;
+    public Animator animatorQuit;
     // Update is called once per frame
     void Update()
     {
-        //Tsumu,RoratePuzzle,Tyouchin
-        if (PlayerPrefs.GetInt("Tsumu")== 1)
+        if (PlayerPrefs.GetInt("Tsumu") == 1)
         {
             Youryoku_zashiki.SetActive(true);
         }
@@ -27,23 +28,34 @@ public class MenuMain : MonoBehaviour
         {
             Youryoku_kappa.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.M))
+        if (animator.GetBool("IsOpen") || animatorQuit.GetBool("IsOpen"))
         {
-            if (IsMenu)
+
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.M))
             {
-                Resume();
-                AudioManager.GetInstance().PlaySound(3);
-            }
-            else
-            {
-                Pause();
-                AudioManager.GetInstance().PlaySound(4);
+                if (IsMenu)
+                {
+                    Resume();
+                    
+                }
+                else
+                {
+                    Pause();
+                    
+                }
             }
         }
+        //Tsumu,RoratePuzzle,Tyouchin
+        
+       
     }
 
     private  void Pause()
     {
+        AudioManager.GetInstance().PlaySound(4);
         MenuUI.SetActive(true);
         IsMenu = true;
         PlayerPrefs.SetInt("nekoMove", 1);
@@ -53,6 +65,7 @@ public class MenuMain : MonoBehaviour
 
     private void Resume()
     {
+        AudioManager.GetInstance().PlaySound(3);
         MenuUI.SetActive(false);
         IsMenu = false;
         PlayerPrefs.SetInt("nekoMove", 2);
