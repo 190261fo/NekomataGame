@@ -6317,7 +6317,6 @@ GameObject:
   - component: {fileID: 580626718}
   - component: {fileID: 580626717}
   - component: {fileID: 580626716}
-  - component: {fileID: 580626725}
   - component: {fileID: 580626723}
   - component: {fileID: 580626742}
   - component: {fileID: 580626739}
@@ -6329,7 +6328,6 @@ GameObject:
   - component: {fileID: 580626761}
   - component: {fileID: 580626760}
   - component: {fileID: 580626759}
-  - component: {fileID: 580626766}
   - component: {fileID: 580626770}
   - component: {fileID: 580626769}
   - component: {fileID: 580626768}
@@ -6390,6 +6388,8 @@ GameObject:
   - component: {fileID: 580626814}
   - component: {fileID: 580626815}
   - component: {fileID: 580626792}
+  - component: {fileID: 580626816}
+  - component: {fileID: 580626725}
   m_Layer: 0
   m_Name: WarpZone
   m_TagString: Untagged
@@ -7486,25 +7486,28 @@ MonoBehaviour:
   waitForFrames: 0
 --- !u!114 &580626725
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580626701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 129
+  itemId: 204
   indentLevel: 1
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1924230383}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  targetGameObjectOLD: {fileID: 0}
+  spriteRenderer: {fileID: 1897925832460211800}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0.1
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 0
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &580626726
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8054,7 +8057,7 @@ MonoBehaviour:
   - {fileID: 580626791}
   - {fileID: 580626790}
   - {fileID: 580626735}
-  - {fileID: 580626725}
+  - {fileID: 580626816}
   - {fileID: 580626787}
   - {fileID: 580626736}
   - {fileID: 580626764}
@@ -8072,8 +8075,8 @@ MonoBehaviour:
   - {fileID: 580626763}
   - {fileID: 580626734}
   - {fileID: 580626731}
+  - {fileID: 580626725}
   - {fileID: 580626762}
-  - {fileID: 580626766}
   - {fileID: 580626761}
   - {fileID: 580626779}
   - {fileID: 580626781}
@@ -8124,10 +8127,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -90.92492, y: 55.637463}
+  scrollPos: {x: -291.75, y: 224.5}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 234
+  blockViewHeight: 200
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -8135,8 +8138,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 580626740}
+  selectedCommands:
+  - {fileID: 580626725}
   variables:
   - {fileID: 580626705}
   - {fileID: 580626772}
@@ -8828,27 +8833,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 154197771}
---- !u!114 &580626766
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580626701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 142
-  indentLevel: 1
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1924230383}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &580626767
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11312,6 +11296,30 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 1
   durationOLD: 0
+--- !u!114 &580626816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580626701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 203
+  indentLevel: 1
+  spriteRenderer: {fileID: 1897925832460211800}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0.5
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 0}
+  waitUntilFinished: 0
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &584779775
 GameObject:
   m_ObjectHideFlags: 3
@@ -23083,7 +23091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936713074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.88632, y: 7.500001, z: -10}
+  m_LocalPosition: {x: -8.880259, y: 7.500001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89627,6 +89635,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3449363b772a7e498294ed338a08817, type: 3}
+--- !u!212 &1897925832460211800 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1897925833291823783, guid: a3449363b772a7e498294ed338a08817,
+    type: 3}
+  m_PrefabInstance: {fileID: 1897925832460211799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2140887271515599076
 PrefabInstance:
   m_ObjectHideFlags: 0
