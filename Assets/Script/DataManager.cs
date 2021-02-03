@@ -113,6 +113,15 @@ namespace Assets.Script
         }
 
 
+        public void DeleteDataCallMiniGame()
+        {
+            PlayerPrefs.DeleteKey("MiniGameMode1");
+            PlayerPrefs.DeleteKey("MiniGameMode2");
+            PlayerPrefs.DeleteKey("MiniGameMode3");
+            PlayerPrefs.Save();
+        }
+
+
         //Tsumu,RoratePuzzle,Tyouchin
 
 

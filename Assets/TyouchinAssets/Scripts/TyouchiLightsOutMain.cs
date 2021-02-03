@@ -184,8 +184,15 @@ public class TyouchiLightsOutMain : MonoBehaviour
 		
 		PlayerPrefs.SetInt("Tyouchin", 1);
 		PlayerPrefs.Save();
-		
-		Invoke("Isekai", 2.0f);
+
+		if (PlayerPrefs.GetInt("MiniGameMode1") == 1)
+		{
+
+		}
+		else
+		{
+			Invoke("Isekai", 2.0f);
+		}
 	}
 
 	// ミニゲーム後の遷移
