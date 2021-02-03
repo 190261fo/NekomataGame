@@ -16,4 +16,9 @@ public class ButtonManager : MonoBehaviour {
     public void RestartClick() {
         SceneManager.LoadScene("Tsumu");
     }
+
+    public void RestartMiniClick()
+    {
+        SceneManager.LoadScene("miniTsumu");
+    }
 }

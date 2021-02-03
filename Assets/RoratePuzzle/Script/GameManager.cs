@@ -107,12 +107,20 @@ public class GameManager : MonoBehaviour
             pic.GetComponent<SpriteRenderer>().color = new Color32(0, 0, 0, 0);
         }
         animatorImageWIN.SetBool("IsOpen", true);
-        
+
         // ↓ 勝利したら"ゲームをやめるかどうか"を尋ねずに、画面遷移したい
         // notificationQuitManager.Open();
 
         // ↓簡易の画面遷移関数
-        Invoke("Isekai", 3.0f);
+        if (PlayerPrefs.GetInt("MiniGameMode3") == 1)
+        {
+           
+
+        }
+        else
+        {
+            Invoke("Isekai", 3.0f);
+        }
     }
 
     //↓簡易の画面遷移関数
@@ -137,12 +145,21 @@ public class GameManager : MonoBehaviour
         TextWin_lose.color = new Color32(162, 11, 0, 255);
         animatorTextWinLose.SetBool("isOpen", true);
         蛇パズル_背景.GetComponent<SpriteRenderer>().color = new Color32(82, 56, 27, 255);
-        notificationQuitManager.Open();
+        
+        if (PlayerPrefs.GetInt("MiniGameMode3") == 1)
+        {
+
+        }
+        else
+        {
+            notificationQuitManager.Open();
+        }
     }
 
 
     public void Replay()
     {
+        MainS.UnPause();  
         MainS.volume = mainManager.getAudioManagerVolume()/3;
         Start();
         GameS.Stop();

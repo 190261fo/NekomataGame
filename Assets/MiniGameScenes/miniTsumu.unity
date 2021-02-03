@@ -283,7 +283,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5705163892313059365}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: RestartClick
+        m_MethodName: RestartMiniClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -101,24 +101,39 @@ public class BlockManager: MonoBehaviour {
 
 	public void SyncResultGUI() {
   		if (resultText != null) {
+			
     		if (int.Parse(scoreManager.scoreText.text) >= 150000){
       			resultText.text = "クリアSSS";
 				PlayerPrefs.SetInt("Tsumu", 1);
 				PlayerPrefs.Save();
+				CallInvoke();
 			} else if (int.Parse(scoreManager.scoreText.text) >= 100000){
       			resultText.text = "クリアS";
 				PlayerPrefs.SetInt("Tsumu", 1);
 				PlayerPrefs.Save();
+				CallInvoke();
 			} else if (int.Parse(scoreManager.scoreText.text) >= 80000){
       			resultText.text = "クリアA";
 				PlayerPrefs.SetInt("Tsumu", 1);
 				PlayerPrefs.Save();
+				CallInvoke();
 			} else {
       			resultText.text = "クリア失敗";
 			}
-			Invoke("Isekai", 3.0f);
     	}
   	}
+
+	public void CallInvoke()
+    {
+		if(PlayerPrefs.GetInt("MiniGameMode2") == 1)
+        {
+			
+        }
+        else
+        {
+			Invoke("Isekai", 3.0f);
+		}
+    }
 	
 	// ミニゲーム後の遷移
 	void Isekai()

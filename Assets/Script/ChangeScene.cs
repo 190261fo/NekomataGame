@@ -119,18 +119,24 @@ public class ChangeScene : MonoBehaviour
     //ミニゲームモード1へ遷移
     public void ChangeMiniGameMode1()
     {
+        PlayerPrefs.SetInt("MiniGameMode1", 1);
+        PlayerPrefs.Save();
         LoadLevel("miniTyouchinLightsOut");
     }
 
     //ミニゲームモード2へ遷移
     public void ChangeMiniGameMode2()
     {
+        PlayerPrefs.SetInt("MiniGameMode2", 1);
+        PlayerPrefs.Save();
         LoadLevel("miniTsumu");
     }
 
     //ミニゲームモード3へ遷移
     public void ChangeMiniGameMode3()
     {
+        PlayerPrefs.SetInt("MiniGameMode3", 1);
+        PlayerPrefs.Save();
         LoadLevel("miniRoratePuzzle");
     }
 
