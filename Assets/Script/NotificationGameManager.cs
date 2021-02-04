@@ -58,4 +58,8 @@ public class NotificationGameManager : MonoBehaviour
     {
         dataManager.DeleteData();
     }
+    public void SetVoid()
+    {
+        Debug.Log("");
+    }
 }
