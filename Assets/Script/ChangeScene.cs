@@ -153,51 +153,51 @@ public class ChangeScene : MonoBehaviour
     void Update()
     {
         //　とりあえず の 切り替えボタン
-        if (Input.GetKeyDown("1"))
-        {
-            // 「1」クリックで ミニゲーム1へ遷移
-            SceneManager.LoadScene("TyouchinLightsOut");
-        }
-        else if (Input.GetKeyDown("2"))
-        {
-            // 「2」クリックで ミニゲーム2 へ遷移
-            SceneManager.LoadScene("Tsumu");
-        }
-        // else if (Flag_RorateGame)
-        // {
-        //     // 「3」クリックで ミニゲーム3 へ遷移
-        //     SceneManager.LoadScene("RoratePuzzle");
-        // }
-        else if (Input.GetKeyDown("3"))
-        {
-            // 「3」クリックで ミニゲーム3 へ遷移
-            SceneManager.LoadScene("RoratePuzzle");
-        }
-        else if (Input.GetKeyDown(KeyCode.G))
-        {
-            // 「G」クリックで 現実世界 へ遷移
-            SceneManager.LoadScene("GenjitsuScene");
-        }
-        else if (Input.GetKeyDown(KeyCode.I))
-        {
-            // 「I」クリックで 異世界 へ遷移
-            SceneManager.LoadScene("IsekaiScene");
-        }
-        else if (Input.GetKeyDown(KeyCode.T))
-        {
-            // 「T」クリックで 異世界 へ遷移
-            SceneManager.LoadScene("TitleScene");
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            // 「O」クリックで 異世界 へ遷移
-            SceneManager.LoadScene("OptionScene");
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            // 「E」クリックで 異世界 へ遷移
-            SceneManager.LoadScene("EndingScene");
-        }
+        //if (Input.GetKeyDown("1"))
+        //{
+        //    // 「1」クリックで ミニゲーム1へ遷移
+        //    SceneManager.LoadScene("TyouchinLightsOut");
+        //}
+        //else if (Input.GetKeyDown("2"))
+        //{
+        //    // 「2」クリックで ミニゲーム2 へ遷移
+        //    SceneManager.LoadScene("Tsumu");
+        //}
+        //// else if (Flag_RorateGame)
+        //// {
+        ////     // 「3」クリックで ミニゲーム3 へ遷移
+        ////     SceneManager.LoadScene("RoratePuzzle");
+        //// }
+        //else if (Input.GetKeyDown("3"))
+        //{
+        //    // 「3」クリックで ミニゲーム3 へ遷移
+        //    SceneManager.LoadScene("RoratePuzzle");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    // 「G」クリックで 現実世界 へ遷移
+        //    SceneManager.LoadScene("GenjitsuScene");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.I))
+        //{
+        //    // 「I」クリックで 異世界 へ遷移
+        //    SceneManager.LoadScene("IsekaiScene");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    // 「T」クリックで 異世界 へ遷移
+        //    SceneManager.LoadScene("TitleScene");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    // 「O」クリックで 異世界 へ遷移
+        //    SceneManager.LoadScene("OptionScene");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    // 「E」クリックで 異世界 へ遷移
+        //    SceneManager.LoadScene("EndingScene");
+        //}
 
 
     }
