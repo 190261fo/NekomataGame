@@ -1158,8 +1158,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1688767381}
+  selectedCommands:
+  - {fileID: 1688767418}
   variables: []
   description: 
   stepPause: 0
@@ -1206,7 +1208,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 92
-    y: 68
+    y: 69
     width: 88
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}

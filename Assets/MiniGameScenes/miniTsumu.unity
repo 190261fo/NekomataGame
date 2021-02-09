@@ -3717,7 +3717,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8933585752351471152}
   - component: {fileID: 8933585752351471309}
-  - component: {fileID: 8933585752351471313}
   - component: {fileID: 8933585752351471317}
   - component: {fileID: 8933585752351471327}
   - component: {fileID: 8933585752351471326}
@@ -3762,10 +3761,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 8933585752351471317}
   selectedCommands: []
-  variables:
-  - {fileID: 8933585752351471313}
+  variables: []
   description: 
   stepPause: 0
   colorCommands: 1
@@ -3776,21 +3775,6 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
---- !u!114 &8933585752351471313
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8933585752351471308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 2
-  key: isTutorial
-  value: 1
 --- !u!114 &8933585752351471316
 MonoBehaviour:
   m_ObjectHideFlags: 2

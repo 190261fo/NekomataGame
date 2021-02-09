@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using Fungus;
 
-public class FungusManeger : MonoBehaviour
+public class FungusManager : MonoBehaviour
 {
     public Fungus.Flowchart flowchart = null;
     public string message = "";
@@ -30,6 +30,9 @@ public class FungusManeger : MonoBehaviour
         {
             flowchart.SetBooleanVariable("Kappa_clear",true);
             
+        }else
+        {
+            flowchart.SetBooleanVariable("Kappa_clear", false);
         }
 
         if (PlayerPrefs.GetInt("Tsumu") == 1)
@@ -37,11 +40,19 @@ public class FungusManeger : MonoBehaviour
             flowchart.SetBooleanVariable("Zashikiwarashi_clear", true);
 
         }
+        else
+        {
+            flowchart.SetBooleanVariable("Zashikiwarashi_clear", false);
+        }
 
         if (PlayerPrefs.GetInt("RoratePuzzle") == 1)
         {
             flowchart.SetBooleanVariable("Tengu_clear", true);
 
+        }
+        else
+        {
+            flowchart.SetBooleanVariable("Tengu_clear", false);
         }
     }
 
