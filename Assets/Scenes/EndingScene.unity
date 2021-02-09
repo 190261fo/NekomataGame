@@ -1150,7 +1150,7 @@ MonoBehaviour:
   scrollPos: {x: 112, y: 184}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 642
+  blockViewHeight: 546
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -1158,10 +1158,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1688767381}
-  selectedCommands:
-  - {fileID: 1688767427}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -2285,7 +2283,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1688767423
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2313,7 +2311,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1688767424
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2341,7 +2339,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1688767425
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2369,7 +2367,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1688767426
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2397,7 +2395,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1688767427
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
