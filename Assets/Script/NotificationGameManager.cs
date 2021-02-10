@@ -2,12 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using System;
 public class NotificationGameManager : MonoBehaviour
 {
     public DataManager dataManager;
     public Animator animator;
     public Animator animatorQuit;
+    public InputField inputField;
+    public Text textTimeSave;
+
     // Start is called before the first frame update
 
 
@@ -15,6 +19,7 @@ public class NotificationGameManager : MonoBehaviour
     public void Open()
     {
         animator.SetBool("IsOpen", true);
+        textTimeSave.text = DateTime.Now.ToString();
     }
 
     public void Close()
@@ -27,6 +32,7 @@ public class NotificationGameManager : MonoBehaviour
     {
         Close();
         dataManager.SaveGame();
+        dataManager.Save(inputField.text);
     }
     public void BtnNo()
     {
