@@ -34,7 +34,7 @@ public class ChangeScene : MonoBehaviour
     {
         if(PlayerPrefs.GetString("Scene") == "")
         {
-            notification.Open();
+            //notification.Open();
         }
         else
         {

@@ -129,6 +129,21 @@ public class NekomataController : MonoBehaviour
         return checkMove;
     }
 
+    public void Move(Boolean move)
+    {
+        if (move)
+        {
+            PlayerPrefs.SetInt("nekoMove", 0);
+            Debug.Log("move");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("nekoMove", 1);
+            Debug.Log("stop");
+        }
+        PlayerPrefs.Save();
+    }
+
 
 
     

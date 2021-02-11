@@ -7,36 +7,64 @@ using System;
 public class NotificationGameManager : MonoBehaviour
 {
     public DataManager dataManager;
-    public Animator animator;
+    public Animator animatorDataMini;
     public Animator animatorQuit;
+    public Animator animatorDataShow;
     public InputField inputField;
     public Text textTimeSave;
+    public GameObject Youryoku_kappa;
+    public GameObject Youryoku_tengu;
+    public GameObject Youryoku_zashiki;
+
+    public Data data;
 
     // Start is called before the first frame update
 
-
-
-    public void Open()
+    public void DataShow(Boolean Is)
     {
-        animator.SetBool("IsOpen", true);
-        textTimeSave.text = DateTime.Now.ToString();
-    }
-
-    public void Close()
-    {
-        animator.SetBool("IsOpen", false);
+        if (Is)
+        {
+            data.ShowData();
+        }
+        
+        animatorDataShow.SetBool("IsOpen", Is);
 
     }
 
-    public void BtnYes()
+    public void DataMini(Boolean Is)
     {
-        Close();
+        if (Is)
+        {
+            textTimeSave.text = DateTime.Now.ToString();
+            if (PlayerPrefs.GetInt("Tsumu") == 1)
+            {
+                Youryoku_zashiki.SetActive(true);
+            }
+            if (PlayerPrefs.GetInt("RoratePuzzle") == 1)
+            {
+                Youryoku_tengu.SetActive(true);
+            }
+            if (PlayerPrefs.GetInt("Tyouchin") == 1)
+            {
+                Youryoku_kappa.SetActive(true);
+            }
+        }
+        animatorDataMini.SetBool("IsOpen", Is);
+        
+    }
+
+  
+
+    public void DataMini_BtnYes()
+    {
+        DataMini(false);
         dataManager.SaveGame();
         dataManager.Save(inputField.text);
+        
     }
-    public void BtnNo()
+    public void DataMini_BtnNo()
     {
-        Close();
+        DataMini(false);
     }
 
     public void QuitOpen()

@@ -16,13 +16,13 @@ namespace Assets.Script
         private FileStream fileStream;
         private BinaryFormatter bf;
         public GameObject player;
+
+        public List<DataSave> DataGame { get => dataGame; set => dataGame = value; }
+
+
         private void Start()
         {
-            Debug.Log("X : " + PlayerPrefs.GetFloat("p_x"));
-            Debug.Log("Y : " + PlayerPrefs.GetFloat("p_x"));
-            Debug.Log("Scene : " + PlayerPrefs.GetString("Scene"));
-            Debug.Log("Load : " + PlayerPrefs.GetInt("Load"));
-            Debug.Log("Saved : " + PlayerPrefs.GetInt("Saved"));
+            debug_log();
 
 
             if (PlayerPrefs.GetInt("Saved") == 1 && PlayerPrefs.GetInt("Load") == 1)
@@ -109,12 +109,7 @@ namespace Assets.Script
             PlayerPrefs.Save();
         }
 
-        public void setMoveData()
-        {
-            PlayerPrefs.SetInt("nekoMove", 0);
-            PlayerPrefs.Save();
-            Debug.Log("move");
-        }
+        
 
 
         public void DeleteDataCallMiniGame()
@@ -160,7 +155,47 @@ namespace Assets.Script
                 dataGame.Add(datasave);
 
 
-                bf.Serialize(fileStream, dataGame);
+                bf.Serialize(fileStream, DataGame);
+                Debug.Log("Đã Lưu");
+            }
+            catch (IOException e)
+            {
+                Debug.Log("ファイルオープンエラー");
+            }
+            finally
+            {
+                if (fileStream != null)
+                {
+                    fileStream.Close();
+                }
+            }
+        }
+
+
+        public void Delete()
+        {
+            bf = new BinaryFormatter();
+            fileStream = null;
+
+            try
+            {
+                //　ゲームフォルダにfiledata.datファイルを作成
+                fileStream = File.Create(Application.dataPath + "/filedata.dat");
+                Debug.Log(Application.dataPath + "/filedata.dat");
+                //　クラスの作成
+
+
+
+                //FullData.Add(data);
+
+
+                //　入力フィールドのテキストをクラスのデータに保存
+                //data.dataText = inputField.text;
+                //　ファイルにクラスを保存
+                dataGame.Clear();
+
+
+                bf.Serialize(fileStream, DataGame);
                 Debug.Log("Đã Lưu");
             }
             catch (IOException e)
@@ -192,11 +227,14 @@ namespace Assets.Script
 
                 dataGame = LoaddataGame;
 
-                foreach (DataSave a in dataGame)
+                if(dataGame.Count != 0)
                 {
-                    Debug.Log(a.DataName + "---" + a.SceneName + "---" + a.Px + "---" + a.Py + "---" + a.TyochinYR + "---" + a.TsutsuYR + "---" + a.HebiYR + "---" + a.Time + "---");
+                    foreach (DataSave a in dataGame)
+                    {
+                        Debug.Log(a.DataName + "---" + a.SceneName + "---" + a.Px + "---" + a.Py + "---" + a.TyochinYR + "---" + a.TsutsuYR + "---" + a.HebiYR + "---" + a.Time + "---");
+                    }
                 }
-                //Debug.Log(dataSave.Name + "vs" + dataSave.Age);
+
                 Debug.Log("đến nơi");
             }
             catch (FileNotFoundException e)
@@ -216,6 +254,24 @@ namespace Assets.Script
             }
 
         }
+
+
+
+
+
+
+        public void debug_log()
+        {
+            Debug.Log("X : " + PlayerPrefs.GetFloat("p_x"));
+            Debug.Log("Y : " + PlayerPrefs.GetFloat("p_x"));
+            Debug.Log("Scene : " + PlayerPrefs.GetString("Scene"));
+            Debug.Log("Load : " + PlayerPrefs.GetInt("Load"));
+            Debug.Log("Saved : " + PlayerPrefs.GetInt("Saved"));
+        }
+
+
+
+       
 
     }
 
