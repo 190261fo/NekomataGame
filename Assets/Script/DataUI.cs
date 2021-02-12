@@ -49,13 +49,13 @@ public class DataUI : MonoBehaviour
     public void fill_transform()
     {
         dataManager.Load();
-
-        if (dataManager.DataGame.Count != 0)
+        
+         if (dataManager.DataGame.Count >= 1)
         {
 
             transform.gameObject.SetActive(true);
             GameObject child = transform.GetChild(0).gameObject;
-            GameObject g;
+
             for (int i = 0; i < dataManager.DataGame.Count; i++)
             {
                 Instantiate(child, transform);
@@ -68,6 +68,8 @@ public class DataUI : MonoBehaviour
             checkDelete = 1;
             transform.gameObject.SetActive(false);
         }
+
+
     }
 
     public void add_transform()
@@ -128,14 +130,19 @@ public class DataUI : MonoBehaviour
 
     }
 
-    
-
-
-
-
-
-    
-
+    public void delete_onetransform()
+    {
+       if(transform.childCount == 1)
+        {
+            fill_transform();
+        }
+        else
+        {
+            GameObject.Destroy(transform.GetChild(transform.childCount - 1).gameObject);
+            fill_Data();
+        }       
+        
+    }
 
      void Edit(int index)
     {
@@ -151,7 +158,7 @@ public class DataUI : MonoBehaviour
         indexDataChange = index;
         Debug.Log("Delete" + indexDataChange);
 
-        //notificationGameManager.DataShow(false);
+        Debug.Log(transform.childCount);
         notificationGameManager.DataMiniDelete(true);
         
         Debug.Log("Delete"+index);
@@ -161,12 +168,6 @@ public class DataUI : MonoBehaviour
     {
         Debug.Log("Save"+index);
     }
-
-
-    //public void setDelete()
-    //{
-    //   GameObject.Destroy(transform.GetChild(0).gameObject);
-    //}
 
 }
     

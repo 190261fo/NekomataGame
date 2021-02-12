@@ -48,9 +48,7 @@ public class NotificationGameManager : MonoBehaviour
         dataManager.Delete("one");
         DataMiniDelete(false);
         //dataUI.setDelete();
-        dataUI.delete_alltransform();
-        dataUI.fill_transform();
-        dataUI.fill_Data();
+        dataUI.delete_onetransform();
         
     }
 
@@ -67,6 +65,7 @@ public class NotificationGameManager : MonoBehaviour
             }
             else
             {
+                inputField.text = "";
                 if (PlayerPrefs.GetInt("Tsumu") == 1)
                 {
                     Youryoku_zashiki.SetActive(true);
