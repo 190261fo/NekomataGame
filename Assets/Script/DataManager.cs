@@ -17,6 +17,8 @@ namespace Assets.Script
         private BinaryFormatter bf;
         public GameObject player;
 
+        public DataUI dataUI;
+
         public List<DataSave> DataGame { get => dataGame; set => dataGame = value; }
 
 
@@ -123,7 +125,7 @@ namespace Assets.Script
 
         //Tsumu,RoratePuzzle,Tyouchin
 
-        public void Save(String dataname)
+        public void Save(int style,String dataname)
         {
             bf = new BinaryFormatter();
             fileStream = null;
@@ -134,9 +136,67 @@ namespace Assets.Script
                 fileStream = File.Create(Application.dataPath + "/filedata.dat");
                 Debug.Log(Application.dataPath + "/filedata.dat");
                 //　クラスの作成
+                if(style == 1)
+                {
+                    Debug.Log("New");
+                    DataSave datasave = new DataSave
+                    (dataname,
+                    SceneManager.GetActiveScene().name,
+                    player.transform.position.x,
+                    player.transform.position.y,
+                    PlayerPrefs.GetInt("Tsumu"),
+                    PlayerPrefs.GetInt("RoratePuzzle"),
+                    PlayerPrefs.GetInt("Tyouchin"),
+                    DateTime.Now
+                    );
+                    dataGame.Add(datasave);
+                }
+                if (style == 2)
+                {
+                    Debug.Log("Edit");
+                    Debug.Log(dataname);
+                    dataGame[dataUI.IndexDataChange].DataName = dataname;
+                    dataGame[dataUI.IndexDataChange].Time = DateTime.Now;
+                }
+                if (style == 3)
+                {
+                    Debug.Log("SaveShortCut");
+                }
+                
+                dataGame.Sort(Compare);
+                dataGame.Reverse();
 
+
+                bf.Serialize(fileStream, dataGame);
+                Debug.Log("Saved");
+            }
+            catch (IOException e)
+            {
+                Debug.Log("ファイルオープンエラー");
+            }
+            finally
+            {
+                if (fileStream != null)
+                {
+                    fileStream.Close();
+                }
+            }
+        }
+
+
+        public void Save1()
+        {
+            bf = new BinaryFormatter();
+            fileStream = null;
+
+            try
+            {
+                //　ゲームフォルダにfiledata.datファイルを作成
+                fileStream = File.Create(Application.dataPath + "/filedata.dat");
+                Debug.Log(Application.dataPath + "/filedata.dat");
+                //　クラスの作成
                 DataSave datasave = new DataSave
-                (dataname,
+                ("test",
                 SceneManager.GetActiveScene().name,
                 player.transform.position.x,
                 player.transform.position.y,
@@ -145,18 +205,14 @@ namespace Assets.Script
                 PlayerPrefs.GetInt("Tyouchin"),
                 DateTime.Now
                 );
-
-                //FullData.Add(data);
-
-
-                //　入力フィールドのテキストをクラスのデータに保存
-                //data.dataText = inputField.text;
-                //　ファイルにクラスを保存
                 dataGame.Add(datasave);
 
+                dataGame.Sort(Compare);
+                dataGame.Reverse();
 
-                bf.Serialize(fileStream, DataGame);
-                Debug.Log("Đã Lưu");
+
+                bf.Serialize(fileStream, dataGame);
+                Debug.Log("Saved");
             }
             catch (IOException e)
             {
@@ -172,7 +228,7 @@ namespace Assets.Script
         }
 
 
-        public void Delete()
+        public void Delete(String style)
         {
             bf = new BinaryFormatter();
             fileStream = null;
@@ -182,20 +238,20 @@ namespace Assets.Script
                 //　ゲームフォルダにfiledata.datファイルを作成
                 fileStream = File.Create(Application.dataPath + "/filedata.dat");
                 Debug.Log(Application.dataPath + "/filedata.dat");
-                //　クラスの作成
+                if (style.Equals("All"))
+                {
+                    dataGame.Clear();
+                }
+                else
+                {
+                    dataGame.RemoveAt(dataUI.IndexDataChange);
+                    dataGame.Sort(Compare);
+                    dataGame.Reverse();
+                }
+               
 
 
-
-                //FullData.Add(data);
-
-
-                //　入力フィールドのテキストをクラスのデータに保存
-                //data.dataText = inputField.text;
-                //　ファイルにクラスを保存
-                dataGame.Clear();
-
-
-                bf.Serialize(fileStream, DataGame);
+                bf.Serialize(fileStream, dataGame);
                 Debug.Log("Đã Lưu");
             }
             catch (IOException e)
@@ -211,10 +267,23 @@ namespace Assets.Script
             }
         }
 
+        private static int Compare(DataSave x, DataSave y)
+        {
+            if (x.Time < y.Time)
+            {
+                return -1;
+            }
+            else if (x.Time > y.Time)
+            {
+                return 1;
+            }
+            return 0;
+        }
+
 
         public void Load()
         {
-            Debug.Log("Chưa đến nơi");
+            Debug.Log("Loading");
             bf = new BinaryFormatter();
             fileStream = null;
 
@@ -235,7 +304,7 @@ namespace Assets.Script
                     }
                 }
 
-                Debug.Log("đến nơi");
+                Debug.Log("Loaded");
             }
             catch (FileNotFoundException e)
             {

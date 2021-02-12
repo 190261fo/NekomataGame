@@ -10,13 +10,17 @@ public class NotificationGameManager : MonoBehaviour
     public Animator animatorDataMini;
     public Animator animatorQuit;
     public Animator animatorDataShow;
+    public Animator animatorDataMini_Save;
+    public Animator animatorDataMini_Delete;
+
     public InputField inputField;
     public Text textTimeSave;
     public GameObject Youryoku_kappa;
     public GameObject Youryoku_tengu;
     public GameObject Youryoku_zashiki;
+    public DataUI dataUI;
 
-    public Data data;
+    
 
     // Start is called before the first frame update
 
@@ -24,46 +28,97 @@ public class NotificationGameManager : MonoBehaviour
     {
         if (Is)
         {
-            data.ShowData();
+            dataUI.fill_Data();
         }
         
         animatorDataShow.SetBool("IsOpen", Is);
 
     }
 
+    public void DataMiniDelete(Boolean Is)
+    {
+
+        animatorDataMini_Delete.SetBool("IsOpen", Is);
+
+    }
+
+    public void DataMiniDelete_BtnYes()
+    {
+
+        dataManager.Delete("one");
+        DataMiniDelete(false);
+        dataUI.setDelete();
+        dataUI.fill_Data();
+        
+    }
+
+    
+
     public void DataMini(Boolean Is)
     {
         if (Is)
         {
             textTimeSave.text = DateTime.Now.ToString();
-            if (PlayerPrefs.GetInt("Tsumu") == 1)
+            if(dataUI.CheckEdit == 1)
             {
-                Youryoku_zashiki.SetActive(true);
+                inputField.text = dataManager.DataGame[dataUI.IndexDataChange].DataName;
             }
-            if (PlayerPrefs.GetInt("RoratePuzzle") == 1)
+            else
             {
-                Youryoku_tengu.SetActive(true);
+                if (PlayerPrefs.GetInt("Tsumu") == 1)
+                {
+                    Youryoku_zashiki.SetActive(true);
+                }
+                if (PlayerPrefs.GetInt("RoratePuzzle") == 1)
+                {
+                    Youryoku_tengu.SetActive(true);
+                }
+                if (PlayerPrefs.GetInt("Tyouchin") == 1)
+                {
+                    Youryoku_kappa.SetActive(true);
+                }
             }
-            if (PlayerPrefs.GetInt("Tyouchin") == 1)
-            {
-                Youryoku_kappa.SetActive(true);
-            }
+            
         }
         animatorDataMini.SetBool("IsOpen", Is);
         
     }
 
-  
+    
+
+
 
     public void DataMini_BtnYes()
     {
+        if(dataUI.CheckEdit == 1)
+        {
+            dataManager.Save(2, inputField.text);
+            Debug.Log("check text:" + inputField.text);
+            dataUI.CheckEdit = 0;
+        }
+        else
+        {
+            
+            dataManager.SaveGame();
+            if (dataUI.CheckDelete == 0)
+            {
+                dataUI.add_transform();
+            }
+            else
+            {
+                dataUI.CheckDelete = 0;
+            }
+            
+            dataManager.Save(1, inputField.text);
+        }
         DataMini(false);
-        dataManager.SaveGame();
-        dataManager.Save(inputField.text);
-        
+        DataShow(true);
+
+
     }
     public void DataMini_BtnNo()
     {
+        dataUI.CheckEdit = 0;
         DataMini(false);
     }
 
@@ -92,8 +147,5 @@ public class NotificationGameManager : MonoBehaviour
     {
         dataManager.DeleteData();
     }
-    public void SetVoid()
-    {
-        Debug.Log("");
-    }
+   
 }
