@@ -1179,7 +1179,7 @@ GameObject:
   - component: {fileID: 1130166972}
   - component: {fileID: 1130166971}
   m_Layer: 0
-  m_Name: "\u5EA7\u6577\u7AE5"
+  m_Name: "\u30B6\u30B7\u30AD\u30EF\u30E9\u30B7"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: "\u5EA7\u6577\u7AE5"
+  nameText: "\u30B6\u30B7\u30AD\u30EF\u30E9\u30B7"
   nameColor: {r: 0.25882354, g: 0.25490198, b: 0.2627451, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -3753,7 +3753,7 @@ MonoBehaviour:
   scrollPos: {x: 59.30035, y: 178.9136}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 473
+  blockViewHeight: 352
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -3761,8 +3761,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 8933585752351471317}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -3817,7 +3816,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 50.699646
-    y: 158.0864
+    y: 162.0864
     width: 135
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
