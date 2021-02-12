@@ -47,7 +47,9 @@ public class NotificationGameManager : MonoBehaviour
 
         dataManager.Delete("one");
         DataMiniDelete(false);
-        dataUI.setDelete();
+        //dataUI.setDelete();
+        dataUI.delete_alltransform();
+        dataUI.fill_transform();
         dataUI.fill_Data();
         
     }

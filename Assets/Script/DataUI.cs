@@ -56,9 +56,7 @@ public class DataUI : MonoBehaviour
             transform.gameObject.SetActive(true);
             GameObject child = transform.GetChild(0).gameObject;
             GameObject g;
-            List<DataSave> dataGame = dataManager.DataGame;
-            dataGame.Reverse();
-            for (int i = 0; i < dataGame.Count; i++)
+            for (int i = 0; i < dataManager.DataGame.Count; i++)
             {
                 Instantiate(child, transform);
             }
@@ -165,10 +163,10 @@ public class DataUI : MonoBehaviour
     }
 
 
-    public void setDelete()
-    {
- //       GameObject.Destroy(transform.GetChild(indexDataChange).gameObject);
-    }
+    //public void setDelete()
+    //{
+    //   GameObject.Destroy(transform.GetChild(0).gameObject);
+    //}
 
 }
     

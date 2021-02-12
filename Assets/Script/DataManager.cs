@@ -244,9 +244,20 @@ namespace Assets.Script
                 }
                 else
                 {
-                    dataGame.RemoveAt(dataUI.IndexDataChange);
-                    dataGame.Sort(Compare);
-                    dataGame.Reverse();
+                    List<DataSave> dataGameCopy = dataGame;
+                    Debug.Log("Vi tri Xoa" + dataUI.IndexDataChange);
+                    dataGameCopy.RemoveAt(dataUI.IndexDataChange);
+                    dataGameCopy.Sort(Compare);
+                    dataGameCopy.Reverse();
+                    dataGame = dataGameCopy;
+                    Debug.Log("Sau khi xoa");
+                    if (dataGame.Count != 0)
+                    {
+                        foreach (DataSave a in dataGame)
+                        {
+                            Debug.Log(a.DataName + "---" + a.SceneName + "---" + a.Px + "---" + a.Py + "---" + a.TyochinYR + "---" + a.TsutsuYR + "---" + a.HebiYR + "---" + a.Time + "---");
+                        }
+                    }
                 }
                
 
