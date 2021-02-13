@@ -10,8 +10,10 @@ public class NotificationGameManager : MonoBehaviour
     public Animator animatorDataMini;
     public Animator animatorQuit;
     public Animator animatorDataShow;
-    public Animator animatorDataMini_Save;
-    public Animator animatorDataMini_Delete;
+    public Animator animatorDataShowLoad;
+    public Animator animatorDataShowLoad_Load;
+    public Animator animatorDataShow_Save;
+    public Animator animatorDataShow_Delete;
 
     public InputField inputField;
     public Text textTimeSave;
@@ -19,8 +21,9 @@ public class NotificationGameManager : MonoBehaviour
     public GameObject Youryoku_tengu;
     public GameObject Youryoku_zashiki;
     public DataUI dataUI;
+    public DataUI_Load dataUI_load;
 
-    
+
 
     // Start is called before the first frame update
 
@@ -35,18 +38,63 @@ public class NotificationGameManager : MonoBehaviour
 
     }
 
-    public void DataMiniDelete(Boolean Is)
-    {
 
-        animatorDataMini_Delete.SetBool("IsOpen", Is);
+    public void DataShowLoad(Boolean Is)
+    {
+        if (Is)
+        {
+            dataUI_load.fill_Data();
+        }
+
+        animatorDataShow.SetBool("IsOpen", Is);
 
     }
 
-    public void DataMiniDelete_BtnYes()
+    public void DataShowLoad_Load(Boolean Is)
+    {
+        
+
+        animatorDataShowLoad_Load.SetBool("IsOpen", Is);
+
+    }
+
+    public void DataShowLoad_Load_BtnYes()
+    {
+
+        dataManager.Save(3, "");
+        DataShowLoad_Load(false);
+
+    }
+
+    public void DataShowDelete(Boolean Is)
+    {
+
+        animatorDataShow_Delete.SetBool("IsOpen", Is);
+
+    }
+
+    public void DataShowSave(Boolean Is)
+    {
+
+        animatorDataShow_Save.SetBool("IsOpen", Is);
+
+    }
+
+    public void DataShowSave_BtnYes()
+    {
+
+        dataManager.Save(3,"");
+        DataShowSave(false);
+        
+        dataUI.fill_Data();
+
+    }
+
+    public void DataShowDelete_BtnYes()
     {
 
         dataManager.Delete("one");
-        DataMiniDelete(false);
+        DataShowDelete(false);
         //dataUI.setDelete();
         dataUI.delete_onetransform();
         

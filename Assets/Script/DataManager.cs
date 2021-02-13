@@ -154,13 +154,22 @@ namespace Assets.Script
                 if (style == 2)
                 {
                     Debug.Log("Edit");
-                    Debug.Log(dataname);
                     dataGame[dataUI.IndexDataChange].DataName = dataname;
                     dataGame[dataUI.IndexDataChange].Time = DateTime.Now;
                 }
                 if (style == 3)
                 {
                     Debug.Log("SaveShortCut");
+                    
+                    dataGame[dataUI.IndexDataChange].SceneName = SceneManager.GetActiveScene().name;
+                    dataGame[dataUI.IndexDataChange].Px = player.transform.position.x;
+                    dataGame[dataUI.IndexDataChange].Py = player.transform.position.y;
+                    dataGame[dataUI.IndexDataChange].HebiYR  = PlayerPrefs.GetInt("RoratePuzzle");
+                    dataGame[dataUI.IndexDataChange].TsutsuYR = PlayerPrefs.GetInt("Tsumu");
+                    dataGame[dataUI.IndexDataChange].TyochinYR  = PlayerPrefs.GetInt("Tyouchin");
+                    dataGame[dataUI.IndexDataChange].Time = DateTime.Now;
+
+
                 }
                 
                 dataGame.Sort(Compare);
