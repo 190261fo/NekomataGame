@@ -18,6 +18,7 @@ namespace Assets.Script
         public GameObject player;
 
         public DataUI dataUI;
+        public DataUI_Load dataUI_load;
 
         public List<DataSave> DataGame { get => dataGame; set => dataGame = value; }
 
@@ -72,18 +73,7 @@ namespace Assets.Script
         }
 
 
-        public void LoadPosition()
-        {
-            
-            float pX = player.transform.position.x;
-            float pY = player.transform.position.y;
-
-            pX = PlayerPrefs.GetFloat("p_x");
-            pY = PlayerPrefs.GetFloat("p_y");
-            player.transform.position = new Vector2(pX, pY);
-            
-            SetLoad();
-        }
+        
 
         public void SaveScene(String SceneName)
         {
@@ -123,7 +113,6 @@ namespace Assets.Script
         }
 
 
-        //Tsumu,RoratePuzzle,Tyouchin
 
         public void Save(int style,String dataname)
         {
@@ -144,9 +133,9 @@ namespace Assets.Script
                     SceneManager.GetActiveScene().name,
                     player.transform.position.x,
                     player.transform.position.y,
-                    PlayerPrefs.GetInt("Tsumu"),
-                    PlayerPrefs.GetInt("RoratePuzzle"),
                     PlayerPrefs.GetInt("Tyouchin"),
+                    PlayerPrefs.GetInt("Tsumu"),
+                    PlayerPrefs.GetInt("RoratePuzzle"),                   
                     DateTime.Now
                     );
                     dataGame.Add(datasave);
@@ -160,7 +149,7 @@ namespace Assets.Script
                 if (style == 3)
                 {
                     Debug.Log("SaveShortCut");
-                    
+                    debug_data();
                     dataGame[dataUI.IndexDataChange].SceneName = SceneManager.GetActiveScene().name;
                     dataGame[dataUI.IndexDataChange].Px = player.transform.position.x;
                     dataGame[dataUI.IndexDataChange].Py = player.transform.position.y;
@@ -209,9 +198,9 @@ namespace Assets.Script
                 SceneManager.GetActiveScene().name,
                 player.transform.position.x,
                 player.transform.position.y,
-                PlayerPrefs.GetInt("Tsumu"),
-                PlayerPrefs.GetInt("RoratePuzzle"),
                 PlayerPrefs.GetInt("Tyouchin"),
+                PlayerPrefs.GetInt("Tsumu"),
+                PlayerPrefs.GetInt("RoratePuzzle"),              
                 DateTime.Now
                 );
                 dataGame.Add(datasave);
@@ -301,7 +290,24 @@ namespace Assets.Script
         }
 
 
-        public void Load()
+
+
+        //Tsumu,RoratePuzzle,Tyouchin
+        public void FillDataToGame()
+        {
+            LoadData();
+            PlayerPrefs.SetFloat("p_x", dataGame[dataUI_load.IndexDataChange].Px);
+            PlayerPrefs.SetFloat("p_y", dataGame[dataUI_load.IndexDataChange].Py);
+            PlayerPrefs.SetInt("RoratePuzzle", dataGame[dataUI_load.IndexDataChange].HebiYR );
+            PlayerPrefs.SetInt("Tsumu", dataGame[dataUI_load.IndexDataChange].TsutsuYR );
+            PlayerPrefs.SetInt("Tyouchin", dataGame[dataUI_load.IndexDataChange].TyochinYR);
+            SaveScene(dataGame[dataUI_load.IndexDataChange].SceneName);
+            PlayerPrefs.SetInt("Saved", 1);         
+            PlayerPrefs.Save();
+
+        }
+
+        public void LoadData()
         {
             Debug.Log("Loading");
             bf = new BinaryFormatter();
@@ -344,6 +350,8 @@ namespace Assets.Script
 
         }
 
+        
+
 
 
 
@@ -356,6 +364,17 @@ namespace Assets.Script
             Debug.Log("Scene : " + PlayerPrefs.GetString("Scene"));
             Debug.Log("Load : " + PlayerPrefs.GetInt("Load"));
             Debug.Log("Saved : " + PlayerPrefs.GetInt("Saved"));
+        }
+
+
+        public void debug_data()
+        {
+            
+
+            Debug.Log("Check Yoryouku");
+            Debug.Log("RoratePuzzle : " + PlayerPrefs.GetInt("RoratePuzzle"));
+            Debug.Log("Tsumu  : " + PlayerPrefs.GetInt("Tsumu"));
+            Debug.Log("Tyouchin : " +  PlayerPrefs.GetInt("Tyouchin"));
         }
 
 

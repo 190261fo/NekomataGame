@@ -14,12 +14,15 @@ public class NotificationGameManager : MonoBehaviour
     public Animator animatorDataShowLoad_Load;
     public Animator animatorDataShow_Save;
     public Animator animatorDataShow_Delete;
-
+    public ChangeScene changeScene;
     public InputField inputField;
     public Text textTimeSave;
     public GameObject Youryoku_kappa;
     public GameObject Youryoku_tengu;
     public GameObject Youryoku_zashiki;
+    public GameObject Utsuwa_kappa;
+    public GameObject Utsuwa_tengu;
+    public GameObject Utsuwa_zashiki;
     public DataUI dataUI;
     public DataUI_Load dataUI_load;
 
@@ -43,10 +46,11 @@ public class NotificationGameManager : MonoBehaviour
     {
         if (Is)
         {
+            
             dataUI_load.fill_Data();
         }
 
-        animatorDataShow.SetBool("IsOpen", Is);
+        animatorDataShowLoad.SetBool("IsOpen", Is);
 
     }
 
@@ -61,7 +65,8 @@ public class NotificationGameManager : MonoBehaviour
     public void DataShowLoad_Load_BtnYes()
     {
 
-        dataManager.Save(3, "");
+        dataManager.FillDataToGame();
+        changeScene.ChangeMap(PlayerPrefs.GetString("Scene"));
         DataShowLoad_Load(false);
 
     }
@@ -116,15 +121,33 @@ public class NotificationGameManager : MonoBehaviour
                 inputField.text = "";
                 if (PlayerPrefs.GetInt("Tsumu") == 1)
                 {
+                    Utsuwa_zashiki.SetActive(false);
                     Youryoku_zashiki.SetActive(true);
+                }
+                else
+                {
+                    Utsuwa_zashiki.SetActive(true);
+                    Youryoku_zashiki.SetActive(false);
                 }
                 if (PlayerPrefs.GetInt("RoratePuzzle") == 1)
                 {
+                    Utsuwa_tengu.SetActive(false);
                     Youryoku_tengu.SetActive(true);
+                }
+                else
+                {
+                    Utsuwa_tengu.SetActive(true);
+                    Youryoku_tengu.SetActive(false);
                 }
                 if (PlayerPrefs.GetInt("Tyouchin") == 1)
                 {
+                    Utsuwa_kappa.SetActive(false);
                     Youryoku_kappa.SetActive(true);
+                }
+                else
+                {
+                    Utsuwa_kappa.SetActive(true);
+                    Youryoku_kappa.SetActive(false);
                 }
             }
             
@@ -148,7 +171,7 @@ public class NotificationGameManager : MonoBehaviour
         else
         {
             
-            dataManager.SaveGame();
+            
             if (dataUI.CheckDelete == 0)
             {
                 dataUI.add_transform();
@@ -185,7 +208,7 @@ public class NotificationGameManager : MonoBehaviour
     public void animationQuit_BtnYes()
     {
         QuitClose();
-        dataManager.SaveGame();
+        DataShow(true);
     }
     public void animationQuit_BtnNo()
     {
@@ -194,7 +217,7 @@ public class NotificationGameManager : MonoBehaviour
 
     public void animationQuit_BtnNoSave()
     {
-        dataManager.DeleteData();
+        dataManager.DeleteData();   
     }
    
 }

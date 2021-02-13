@@ -22,6 +22,9 @@ public class DataUI : MonoBehaviour
 {
     public DataManager dataManager;
     public NotificationGameManager notificationGameManager;
+    public DataUI_Load dataUI_Load;
+
+
     private int checkDelete = 0;
 
     private int checkEdit = 0;
@@ -48,17 +51,19 @@ public class DataUI : MonoBehaviour
 
     public void fill_transform()
     {
-        dataManager.Load();
+        dataManager.LoadData();
         
          if (dataManager.DataGame.Count >= 1)
         {
 
             transform.gameObject.SetActive(true);
+            
             GameObject child = transform.GetChild(0).gameObject;
-
+            
             for (int i = 0; i < dataManager.DataGame.Count; i++)
             {
                 Instantiate(child, transform);
+                
             }
 
             Destroy(child);
@@ -67,6 +72,7 @@ public class DataUI : MonoBehaviour
         {
             checkDelete = 1;
             transform.gameObject.SetActive(false);
+            
         }
 
 
@@ -75,11 +81,12 @@ public class DataUI : MonoBehaviour
     public void add_transform()
     {
         Instantiate(transform.GetChild(0).gameObject, transform);
+        Instantiate(dataUI_Load.transform.GetChild(0).gameObject, dataUI_Load.transform);
     }
 
     public void fill_Data()
     {
-        dataManager.Load();
+        dataManager.LoadData();
         if (dataManager.DataGame.Count != 0)
         {
             transform.gameObject.SetActive(true);
@@ -91,17 +98,37 @@ public class DataUI : MonoBehaviour
                 DataSave data = dataGame[i];
                 Debug.Log(data.DataName + "---" + data.SceneName + "---" + data.Px + "---" + data.Py + "---" + data.TyochinYR + "---" + data.TsutsuYR + "---" + data.HebiYR + "---" + data.Time + "---");
                 g.transform.GetChild(0).GetComponent<Text>().text = data.DataName;
-                if (data.HebiYR == 0)
+                if (data.TyochinYR == 0)
                 {
+                    g.transform.GetChild(5).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                     g.transform.GetChild(6).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                }
+                else
+                {
+                    g.transform.GetChild(5).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                    g.transform.GetChild(6).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                 }
                 if (data.TsutsuYR == 0)
                 {
+                    g.transform.GetChild(10).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                    g.transform.GetChild(9).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+                }
+                else
+                {
+                    g.transform.GetChild(9).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                    g.transform.GetChild(10).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                }
+            
+                if (data.HebiYR == 0)
+                {
+                    g.transform.GetChild(7).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                     g.transform.GetChild(8).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 }
-                if (data.TyochinYR == 0)
+                else
                 {
-                    g.transform.GetChild(10).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                    g.transform.GetChild(7).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                    g.transform.GetChild(8).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                 }
                 g.transform.GetChild(11).GetComponent<Text>().text = data.SceneName;
                 g.transform.GetChild(4).GetComponent<Text>().text = data.Time.ToString();
@@ -113,9 +140,12 @@ public class DataUI : MonoBehaviour
         else
         {
             transform.gameObject.SetActive(false);
+            dataUI_Load.transform.gameObject.SetActive(false);
         }
 
     }
+
+
 
     public void delete_alltransform()
     {
@@ -124,6 +154,7 @@ public class DataUI : MonoBehaviour
             for (int i = 1; i < transform.childCount; i++)
             {
                 GameObject.Destroy(transform.GetChild(i).gameObject);
+                GameObject.Destroy(dataUI_Load.transform.GetChild(i).gameObject);
             }
         }
         CheckDelete = 1;
@@ -139,6 +170,7 @@ public class DataUI : MonoBehaviour
         else
         {
             GameObject.Destroy(transform.GetChild(transform.childCount - 1).gameObject);
+            GameObject.Destroy(dataUI_Load.transform.GetChild(transform.childCount - 1).gameObject);
             fill_Data();
         }       
         

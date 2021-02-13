@@ -20,6 +20,7 @@ public class DataUI_Load : MonoBehaviour
     public DataManager dataManager;
     public NotificationGameManager notificationGameManager;
     
+    
 
 
     private int indexDataChange = 0;
@@ -29,17 +30,12 @@ public class DataUI_Load : MonoBehaviour
     void Start()
     {
         fill_transform();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        fill_Data();
     }
 
     public void fill_transform()
     {
-        dataManager.Load();
+        dataManager.LoadData();
 
         if (dataManager.DataGame.Count >= 1)
         {
@@ -53,20 +49,20 @@ public class DataUI_Load : MonoBehaviour
             }
 
             Destroy(child);
+            Debug.Log("loadeeeee"+ transform.childCount);
         }
         else
         {
             transform.gameObject.SetActive(false);
         }
 
-
     }
 
-    
+
 
     public void fill_Data()
     {
-        dataManager.Load();
+            dataManager.LoadData();
         if (dataManager.DataGame.Count != 0)
         {
             transform.gameObject.SetActive(true);
@@ -80,18 +76,36 @@ public class DataUI_Load : MonoBehaviour
                 g.transform.GetChild(0).GetComponent<Text>().text = data.DataName;
                 if (data.HebiYR == 0)
                 {
+                    g.transform.GetChild(5).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                     g.transform.GetChild(6).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                }
+                else
+                {
+                    g.transform.GetChild(5).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                    g.transform.GetChild(6).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                 }
                 if (data.TsutsuYR == 0)
                 {
+                    g.transform.GetChild(7).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                     g.transform.GetChild(8).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                }
+                else
+                {
+                    g.transform.GetChild(8).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                    g.transform.GetChild(7).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 }
                 if (data.TyochinYR == 0)
                 {
-                    g.transform.GetChild(10).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                    g.transform.GetChild(3).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                    g.transform.GetChild(4).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 }
-                g.transform.GetChild(11).GetComponent<Text>().text = data.SceneName;
-                g.transform.GetChild(4).GetComponent<Text>().text = data.Time.ToString();
+                else
+                {
+                    g.transform.GetChild(4).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                    g.transform.GetChild(3).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                }
+                g.transform.GetChild(9).GetComponent<Text>().text = data.SceneName;
+                g.transform.GetChild(2).GetComponent<Text>().text = data.Time.ToString();
                 g.transform.GetChild(1).GetComponent<Button>().AddEventListener(i, Load);
             }
         }
@@ -99,16 +113,15 @@ public class DataUI_Load : MonoBehaviour
         {
             transform.gameObject.SetActive(false);
         }
-
-        void Load(int index)
-        {
-            indexDataChange = index;
-            Debug.Log("Load" + indexDataChange);
-
-            notificationGameManager.DataShowLoad_Load(true);
-            Debug.Log("Load" + index);
-        }
-
-
     }
+
+    void Load(int index)
+    {
+        indexDataChange = index;
+        Debug.Log("Load" + indexDataChange);
+
+        notificationGameManager.DataShowLoad_Load(true);
+        Debug.Log("Load" + index);
+    }
+
 }
