@@ -11,8 +11,12 @@ public class MenuMain : MonoBehaviour
     public GameObject Youryoku_tengu;
     public GameObject Youryoku_zashiki;
     public NekomataController neko;
-    public Animator animator;
-    public Animator animatorQuit;
+    public Animator DataMini;
+    public Animator Quit;
+    public Animator DataShow;
+    public Animator DataShowLoad;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -28,7 +32,7 @@ public class MenuMain : MonoBehaviour
         {
             Youryoku_kappa.SetActive(true);
         }
-        if (animator.GetBool("IsOpen") || animatorQuit.GetBool("IsOpen"))
+        if (DataMini.GetBool("IsOpen") || Quit.GetBool("IsOpen")|| DataShow.GetBool("IsOpen") || DataShowLoad.GetBool("IsOpen"))
         {
 
         }

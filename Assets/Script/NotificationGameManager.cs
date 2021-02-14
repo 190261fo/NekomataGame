@@ -14,9 +14,13 @@ public class NotificationGameManager : MonoBehaviour
     public Animator animatorDataShowLoad_Load;
     public Animator animatorDataShow_Save;
     public Animator animatorDataShow_Delete;
+    public Animator animatorDataShow_DeleteAll;
     public ChangeScene changeScene;
     public InputField inputField;
     public Text textTimeSave;
+    public Text textNoDataShow;
+    public Text textNoDataShowLoad;
+    public Button Btn_DeleteAll;
     public GameObject Youryoku_kappa;
     public GameObject Youryoku_tengu;
     public GameObject Youryoku_zashiki;
@@ -100,12 +104,25 @@ public class NotificationGameManager : MonoBehaviour
 
         dataManager.Delete("one");
         DataShowDelete(false);
-        //dataUI.setDelete();
         dataUI.delete_onetransform();
         
     }
 
-    
+    public void DataShowDeleteAll_BtnYes()
+    {
+        dataManager.Delete("All");
+        DataShowDeleteAll(false);
+        dataUI.delete_onetransform();
+        dataUI.fill_transform();
+
+    }
+
+    public void DataShowDeleteAll(Boolean Is)
+    {
+        animatorDataShow_DeleteAll.SetBool("IsOpen", Is);
+    }
+
+
 
     public void DataMini(Boolean Is)
     {
@@ -183,6 +200,14 @@ public class NotificationGameManager : MonoBehaviour
             
             dataManager.Save(1, inputField.text);
         }
+        if (!Btn_DeleteAll.interactable)
+        {
+            
+            textNoDataShow.gameObject.SetActive(false);
+            textNoDataShowLoad.gameObject.SetActive(false);
+            Btn_DeleteAll.interactable = true;
+        }
+         
         DataMini(false);
         DataShow(true);
 

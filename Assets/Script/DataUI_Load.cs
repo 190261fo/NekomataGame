@@ -39,7 +39,7 @@ public class DataUI_Load : MonoBehaviour
 
         if (dataManager.DataGame.Count >= 1)
         {
-
+            notificationGameManager.textNoDataShowLoad.gameObject.SetActive(false);
             transform.gameObject.SetActive(true);
             GameObject child = transform.GetChild(0).gameObject;
 
@@ -53,6 +53,7 @@ public class DataUI_Load : MonoBehaviour
         }
         else
         {
+            notificationGameManager.textNoDataShowLoad.gameObject.SetActive(true);
             transform.gameObject.SetActive(false);
         }
 

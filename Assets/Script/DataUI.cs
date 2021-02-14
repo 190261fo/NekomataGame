@@ -55,7 +55,8 @@ public class DataUI : MonoBehaviour
         
          if (dataManager.DataGame.Count >= 1)
         {
-
+            notificationGameManager.textNoDataShow.gameObject.SetActive(false);
+            notificationGameManager.textNoDataShowLoad.gameObject.SetActive(false);
             transform.gameObject.SetActive(true);
             
             GameObject child = transform.GetChild(0).gameObject;
@@ -70,6 +71,9 @@ public class DataUI : MonoBehaviour
         }
         else
         {
+            notificationGameManager.Btn_DeleteAll.interactable = false;
+            notificationGameManager.textNoDataShow.gameObject.SetActive(true);
+            notificationGameManager.textNoDataShowLoad.gameObject.SetActive(true);
             checkDelete = 1;
             transform.gameObject.SetActive(false);
             
