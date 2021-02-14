@@ -16,13 +16,16 @@ namespace Assets.Script
         private FileStream fileStream;
         private BinaryFormatter bf;
         public GameObject player;
+
+        public DataUI dataUI;
+        public DataUI_Load dataUI_load;
+
+        public List<DataSave> DataGame { get => dataGame; set => dataGame = value; }
+
+
         private void Start()
         {
-            Debug.Log("X : " + PlayerPrefs.GetFloat("p_x"));
-            Debug.Log("Y : " + PlayerPrefs.GetFloat("p_x"));
-            Debug.Log("Scene : " + PlayerPrefs.GetString("Scene"));
-            Debug.Log("Load : " + PlayerPrefs.GetInt("Load"));
-            Debug.Log("Saved : " + PlayerPrefs.GetInt("Saved"));
+            debug_log();
 
 
             if (PlayerPrefs.GetInt("Saved") == 1 && PlayerPrefs.GetInt("Load") == 1)
@@ -70,18 +73,7 @@ namespace Assets.Script
         }
 
 
-        public void LoadPosition()
-        {
-            
-            float pX = player.transform.position.x;
-            float pY = player.transform.position.y;
-
-            pX = PlayerPrefs.GetFloat("p_x");
-            pY = PlayerPrefs.GetFloat("p_y");
-            player.transform.position = new Vector2(pX, pY);
-            
-            SetLoad();
-        }
+        
 
         public void SaveScene(String SceneName)
         {
@@ -109,12 +101,7 @@ namespace Assets.Script
             PlayerPrefs.Save();
         }
 
-        public void setMoveData()
-        {
-            PlayerPrefs.SetInt("nekoMove", 0);
-            PlayerPrefs.Save();
-            Debug.Log("move");
-        }
+        
 
 
         public void DeleteDataCallMiniGame()
@@ -126,9 +113,8 @@ namespace Assets.Script
         }
 
 
-        //Tsumu,RoratePuzzle,Tyouchin
 
-        public void Save(String dataname)
+        public void Save(int style,String dataname)
         {
             bf = new BinaryFormatter();
             fileStream = null;
@@ -139,25 +125,139 @@ namespace Assets.Script
                 fileStream = File.Create(Application.dataPath + "/filedata.dat");
                 Debug.Log(Application.dataPath + "/filedata.dat");
                 //　クラスの作成
+                if(style == 1)
+                {
+                    Debug.Log("New");
+                    DataSave datasave = new DataSave
+                    (dataname,
+                    SceneManager.GetActiveScene().name,
+                    player.transform.position.x,
+                    player.transform.position.y,
+                    PlayerPrefs.GetInt("Tyouchin"),
+                    PlayerPrefs.GetInt("Tsumu"),
+                    PlayerPrefs.GetInt("RoratePuzzle"),                   
+                    DateTime.Now
+                    );
+                    dataGame.Add(datasave);
+                }
+                if (style == 2)
+                {
+                    Debug.Log("Edit");
+                    dataGame[dataUI.IndexDataChange].DataName = dataname;
+                    dataGame[dataUI.IndexDataChange].Time = DateTime.Now;
+                }
+                if (style == 3)
+                {
+                    Debug.Log("SaveShortCut");
+                    debug_data();
+                    dataGame[dataUI.IndexDataChange].SceneName = SceneManager.GetActiveScene().name;
+                    dataGame[dataUI.IndexDataChange].Px = player.transform.position.x;
+                    dataGame[dataUI.IndexDataChange].Py = player.transform.position.y;
+                    dataGame[dataUI.IndexDataChange].HebiYR  = PlayerPrefs.GetInt("RoratePuzzle");
+                    dataGame[dataUI.IndexDataChange].TsutsuYR = PlayerPrefs.GetInt("Tsumu");
+                    dataGame[dataUI.IndexDataChange].TyochinYR  = PlayerPrefs.GetInt("Tyouchin");
+                    dataGame[dataUI.IndexDataChange].Time = DateTime.Now;
 
+
+                }
+                
+                dataGame.Sort(Compare);
+                dataGame.Reverse();
+
+
+                bf.Serialize(fileStream, dataGame);
+                Debug.Log("Saved");
+            }
+            catch (IOException e)
+            {
+                Debug.Log("ファイルオープンエラー");
+            }
+            finally
+            {
+                if (fileStream != null)
+                {
+                    fileStream.Close();
+                }
+            }
+        }
+
+
+        public void Save1()
+        {
+            bf = new BinaryFormatter();
+            fileStream = null;
+
+            try
+            {
+                //　ゲームフォルダにfiledata.datファイルを作成
+                fileStream = File.Create(Application.dataPath + "/filedata.dat");
+                Debug.Log(Application.dataPath + "/filedata.dat");
+                //　クラスの作成
                 DataSave datasave = new DataSave
-                (dataname,
+                ("test",
                 SceneManager.GetActiveScene().name,
                 player.transform.position.x,
                 player.transform.position.y,
-                PlayerPrefs.GetInt("Tsumu"),
-                PlayerPrefs.GetInt("RoratePuzzle"),
                 PlayerPrefs.GetInt("Tyouchin"),
+                PlayerPrefs.GetInt("Tsumu"),
+                PlayerPrefs.GetInt("RoratePuzzle"),              
                 DateTime.Now
                 );
-
-                //FullData.Add(data);
-
-
-                //　入力フィールドのテキストをクラスのデータに保存
-                //data.dataText = inputField.text;
-                //　ファイルにクラスを保存
                 dataGame.Add(datasave);
+
+                dataGame.Sort(Compare);
+                dataGame.Reverse();
+
+
+                bf.Serialize(fileStream, dataGame);
+                Debug.Log("Saved");
+            }
+            catch (IOException e)
+            {
+                Debug.Log("ファイルオープンエラー");
+            }
+            finally
+            {
+                if (fileStream != null)
+                {
+                    fileStream.Close();
+                }
+            }
+        }
+
+
+        public void Delete(String style)
+        {
+            bf = new BinaryFormatter();
+            fileStream = null;
+
+            try
+            {
+                //　ゲームフォルダにfiledata.datファイルを作成
+                fileStream = File.Create(Application.dataPath + "/filedata.dat");
+                Debug.Log(Application.dataPath + "/filedata.dat");
+                if (style.Equals("All"))
+                {
+                    dataGame.Clear();
+                }
+                else
+                {
+                    List<DataSave> dataGameCopy = dataGame;
+                    Debug.Log("Vi tri Xoa" + dataUI.IndexDataChange);
+                    dataGameCopy.RemoveAt(dataUI.IndexDataChange);
+                    dataGameCopy.Sort(Compare);
+                    dataGameCopy.Reverse();
+                    dataGame = dataGameCopy;
+                    Debug.Log("Sau khi xoa");
+                    if (dataGame.Count != 0)
+                    {
+                        foreach (DataSave a in dataGame)
+                        {
+                            Debug.Log(a.DataName + "---" + a.SceneName + "---" + a.Px + "---" + a.Py + "---" + a.TyochinYR + "---" + a.TsutsuYR + "---" + a.HebiYR + "---" + a.Time + "---");
+                        }
+                    }
+                }
+               
 
 
                 bf.Serialize(fileStream, dataGame);
@@ -176,10 +276,40 @@ namespace Assets.Script
             }
         }
 
-
-        public void Load()
+        private static int Compare(DataSave x, DataSave y)
         {
-            Debug.Log("Chưa đến nơi");
+            if (x.Time < y.Time)
+            {
+                return -1;
+            }
+            else if (x.Time > y.Time)
+            {
+                return 1;
+            }
+            return 0;
+        }
+
+
+
+
+        //Tsumu,RoratePuzzle,Tyouchin
+        public void FillDataToGame()
+        {
+            LoadData();
+            PlayerPrefs.SetFloat("p_x", dataGame[dataUI_load.IndexDataChange].Px);
+            PlayerPrefs.SetFloat("p_y", dataGame[dataUI_load.IndexDataChange].Py);
+            PlayerPrefs.SetInt("RoratePuzzle", dataGame[dataUI_load.IndexDataChange].HebiYR );
+            PlayerPrefs.SetInt("Tsumu", dataGame[dataUI_load.IndexDataChange].TsutsuYR );
+            PlayerPrefs.SetInt("Tyouchin", dataGame[dataUI_load.IndexDataChange].TyochinYR);
+            SaveScene(dataGame[dataUI_load.IndexDataChange].SceneName);
+            PlayerPrefs.SetInt("Saved", 1);         
+            PlayerPrefs.Save();
+
+        }
+
+        public void LoadData()
+        {
+            Debug.Log("Loading");
             bf = new BinaryFormatter();
             fileStream = null;
 
@@ -192,12 +322,15 @@ namespace Assets.Script
 
                 dataGame = LoaddataGame;
 
-                foreach (DataSave a in dataGame)
+                if(dataGame.Count != 0)
                 {
-                    Debug.Log(a.DataName + "---" + a.SceneName + "---" + a.Px + "---" + a.Py + "---" + a.TyochinYR + "---" + a.TsutsuYR + "---" + a.HebiYR + "---" + a.Time + "---");
+                    foreach (DataSave a in dataGame)
+                    {
+                        Debug.Log(a.DataName + "---" + a.SceneName + "---" + a.Px + "---" + a.Py + "---" + a.TyochinYR + "---" + a.TsutsuYR + "---" + a.HebiYR + "---" + a.Time + "---");
+                    }
                 }
-                //Debug.Log(dataSave.Name + "vs" + dataSave.Age);
-                Debug.Log("đến nơi");
+
+                Debug.Log("Loaded");
             }
             catch (FileNotFoundException e)
             {
@@ -216,6 +349,37 @@ namespace Assets.Script
             }
 
         }
+
+        
+
+
+
+
+
+
+        public void debug_log()
+        {
+            Debug.Log("X : " + PlayerPrefs.GetFloat("p_x"));
+            Debug.Log("Y : " + PlayerPrefs.GetFloat("p_x"));
+            Debug.Log("Scene : " + PlayerPrefs.GetString("Scene"));
+            Debug.Log("Load : " + PlayerPrefs.GetInt("Load"));
+            Debug.Log("Saved : " + PlayerPrefs.GetInt("Saved"));
+        }
+
+
+        public void debug_data()
+        {
+            
+
+            Debug.Log("Check Yoryouku");
+            Debug.Log("RoratePuzzle : " + PlayerPrefs.GetInt("RoratePuzzle"));
+            Debug.Log("Tsumu  : " + PlayerPrefs.GetInt("Tsumu"));
+            Debug.Log("Tyouchin : " +  PlayerPrefs.GetInt("Tyouchin"));
+        }
+
+
+
+       
 
     }
 

@@ -14,11 +14,12 @@ public class SoundPresenter : MonoBehaviour {
 
 
     void Start() {
-        setStartAudioManager();
+        setStartSound();
         AudioManager.GetInstance().PlayBGM(0);
     }
 
     public void OnChangedBGMSlider() {
+        PlayerPrefs.SetInt("defaultBGM", 1);
         PlayerPrefs.SetFloat("BGM", bgmSlider.value);
         PlayerPrefs.Save();
         AudioManager.GetInstance().BGMVolume = bgmSlider.value;
@@ -26,6 +27,7 @@ public class SoundPresenter : MonoBehaviour {
     }
 
     public void OnChangedSESlider() {
+        PlayerPrefs.SetInt("defaultSE", 1);
         PlayerPrefs.SetFloat("SE", seSlider.value);
         PlayerPrefs.Save();
         AudioManager.GetInstance().SEVolume = seSlider.value;
@@ -36,13 +38,29 @@ public class SoundPresenter : MonoBehaviour {
         AudioManager.GetInstance().PlaySound(0); // テスト
     }
 
-    public void setStartAudioManager()
+    public void setStartSound()
     {
-        
+        //if (PlayerPrefs.GetInt("defaultBGM") == 0)
+        //{
+        //    bgmSlider.value = 0.2f;
+        //}
+        //else
+        //{
+        //    bgmSlider.value = PlayerPrefs.GetFloat("BGM");
+        //}
+
+        //if (PlayerPrefs.GetInt("defaultSE") == 0)
+        //{
+        //    seSlider.value = 0.2f;
+        //}
+        //else
+        //{
+        //    seSlider.value = PlayerPrefs.GetFloat("SE");
+        //}
         bgmSlider.value = PlayerPrefs.GetFloat("BGM");
         seSlider.value = PlayerPrefs.GetFloat("SE");
-        
-        
     }
+
     
+
 }
