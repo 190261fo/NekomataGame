@@ -112,7 +112,7 @@ public class BlockManager: MonoBehaviour {
 				PlayerPrefs.SetInt("Tsumu", 1);
 				PlayerPrefs.Save();
 				CallInvoke();
-			} else if (int.Parse(scoreManager.scoreText.text) >= 500){
+			} else if (int.Parse(scoreManager.scoreText.text) >= 80000){
       			resultText.text = "クリアA";
 				PlayerPrefs.SetInt("Tsumu", 1);
 				PlayerPrefs.Save();
