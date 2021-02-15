@@ -124,7 +124,7 @@ public class NotificationGameManager : MonoBehaviour
     {
         dataManager.Delete("All");
         DataShowDeleteAll(false);
-        dataUI.delete_onetransform();
+        dataUI.delete_alltransform();
         dataUI.fill_transform();
 
     }
@@ -143,7 +143,39 @@ public class NotificationGameManager : MonoBehaviour
             textTimeSave.text = DateTime.Now.ToString();
             if(dataUI.CheckEdit == 1)
             {
-                inputField.text = dataManager.DataGame[dataUI.IndexDataChange].DataName;
+                List<DataSave> l = dataManager.DataGame;
+                int i = dataUI.IndexDataChange;
+                inputField.text = l[i].DataName;
+                if (l[i].TsutsuYR == 1)
+                {
+                    Utsuwa_zashiki.SetActive(false);
+                    Youryoku_zashiki.SetActive(true);
+                }
+                else
+                {
+                    Utsuwa_zashiki.SetActive(true);
+                    Youryoku_zashiki.SetActive(false);
+                }
+                if (l[i].HebiYR == 1)
+                {
+                    Utsuwa_tengu.SetActive(false);
+                    Youryoku_tengu.SetActive(true);
+                }
+                else
+                {
+                    Utsuwa_tengu.SetActive(true);
+                    Youryoku_tengu.SetActive(false);
+                }
+                if (l[i].TyochinYR == 1)
+                {
+                    Utsuwa_kappa.SetActive(false);
+                    Youryoku_kappa.SetActive(true);
+                }
+                else
+                {
+                    Utsuwa_kappa.SetActive(true);
+                    Youryoku_kappa.SetActive(false);
+                }
             }
             else
             {
@@ -191,31 +223,7 @@ public class NotificationGameManager : MonoBehaviour
 
     public void DataMini_BtnYes()
     {
-        //if(dataUI.CheckEdit == 1)
-        //{
-            
-        //    dataManager.Save(2, inputField.text);
-        //    dataUI.CheckEdit = 0;
-        //}
-        //else
-        //{
-            
-            
-        //    if (dataUI.CheckDelete == 0)
-        //    {
-        //        dataUI.add_transform();
-        //    }
-        //    else
-        //    {
-        //        dataUI.CheckDelete = 0;
-        //    }
-            
-        //    dataManager.Save(1, inputField.text);
-        //}
         
-         
-        //DataMini(false);
-        //DataShow(true);
         if (PlayerPrefs.GetInt("OutGame") == 1)
         {
             if (dataUI.CheckDelete == 0)
