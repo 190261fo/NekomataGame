@@ -93,9 +93,21 @@ public class NotificationGameManager : MonoBehaviour
     {
 
         dataManager.Save(3,"");
-        DataShowSave(false);
-        
-        dataUI.fill_Data();
+        if (PlayerPrefs.GetInt("OutGame") == 1)
+        {
+            changeScene.ChangeTitle();
+            
+        }
+        else
+        {
+            DataShowSave(false);
+
+            dataUI.fill_Data();
+        }
+
+        PlayerPrefs.SetInt("OutGame", 0);
+        PlayerPrefs.Save();
+
 
     }
 
@@ -179,16 +191,33 @@ public class NotificationGameManager : MonoBehaviour
 
     public void DataMini_BtnYes()
     {
-        if(dataUI.CheckEdit == 1)
-        {
-            dataManager.Save(2, inputField.text);
-            Debug.Log("check text:" + inputField.text);
-            dataUI.CheckEdit = 0;
-        }
-        else
-        {
+        //if(dataUI.CheckEdit == 1)
+        //{
+            
+        //    dataManager.Save(2, inputField.text);
+        //    dataUI.CheckEdit = 0;
+        //}
+        //else
+        //{
             
             
+        //    if (dataUI.CheckDelete == 0)
+        //    {
+        //        dataUI.add_transform();
+        //    }
+        //    else
+        //    {
+        //        dataUI.CheckDelete = 0;
+        //    }
+            
+        //    dataManager.Save(1, inputField.text);
+        //}
+        
+         
+        //DataMini(false);
+        //DataShow(true);
+        if (PlayerPrefs.GetInt("OutGame") == 1)
+        {
             if (dataUI.CheckDelete == 0)
             {
                 dataUI.add_transform();
@@ -197,19 +226,47 @@ public class NotificationGameManager : MonoBehaviour
             {
                 dataUI.CheckDelete = 0;
             }
-            
+
             dataManager.Save(1, inputField.text);
+            changeScene.ChangeTitle();
+
+        }
+        else
+        {
+
+            if (dataUI.CheckEdit == 1)
+            {
+
+                dataManager.Save(2, inputField.text);
+                dataUI.CheckEdit = 0;
+            }
+            else
+            {
+                if (dataUI.CheckDelete == 0)
+                {
+                    dataUI.add_transform();
+                }
+                else
+                {
+                    dataUI.CheckDelete = 0;
+                }
+
+                dataManager.Save(1, inputField.text);
+            }
+
+
+            DataMini(false);
+            DataShow(true);
         }
         if (!Btn_DeleteAll.interactable)
         {
-            
+
             textNoDataShow.gameObject.SetActive(false);
             textNoDataShowLoad.gameObject.SetActive(false);
             Btn_DeleteAll.interactable = true;
         }
-         
-        DataMini(false);
-        DataShow(true);
+        PlayerPrefs.SetInt("OutGame", 0);
+        PlayerPrefs.Save();
 
 
     }
@@ -234,6 +291,7 @@ public class NotificationGameManager : MonoBehaviour
     {
         QuitClose();
         DataShow(true);
+        PlayerPrefs.SetInt("OutGame", 1);
     }
     public void animationQuit_BtnNo()
     {
