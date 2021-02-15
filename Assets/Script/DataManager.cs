@@ -167,6 +167,8 @@ namespace Assets.Script
 
                 bf.Serialize(fileStream, dataGame);
                 Debug.Log("Saved");
+
+                
             }
             catch (IOException e)
             {
@@ -182,48 +184,7 @@ namespace Assets.Script
         }
 
 
-        public void Save1()
-        {
-            bf = new BinaryFormatter();
-            fileStream = null;
-
-            try
-            {
-                //　ゲームフォルダにfiledata.datファイルを作成
-                fileStream = File.Create(Application.dataPath + "/filedata.dat");
-                Debug.Log(Application.dataPath + "/filedata.dat");
-                //　クラスの作成
-                DataSave datasave = new DataSave
-                ("test",
-                SceneManager.GetActiveScene().name,
-                player.transform.position.x,
-                player.transform.position.y,
-                PlayerPrefs.GetInt("Tyouchin"),
-                PlayerPrefs.GetInt("Tsumu"),
-                PlayerPrefs.GetInt("RoratePuzzle"),              
-                DateTime.Now
-                );
-                dataGame.Add(datasave);
-
-                dataGame.Sort(Compare);
-                dataGame.Reverse();
-
-
-                bf.Serialize(fileStream, dataGame);
-                Debug.Log("Saved");
-            }
-            catch (IOException e)
-            {
-                Debug.Log("ファイルオープンエラー");
-            }
-            finally
-            {
-                if (fileStream != null)
-                {
-                    fileStream.Close();
-                }
-            }
-        }
+        
 
 
         public void Delete(String style)

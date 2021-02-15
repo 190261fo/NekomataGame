@@ -182,6 +182,8 @@ public class DataUI : MonoBehaviour
 
      void Edit(int index)
     {
+        PlayerPrefs.SetInt("OutGame", 0);
+        PlayerPrefs.Save();
         checkEdit = 1;
         indexDataChange = index;
         Debug.Log("Edit" + indexDataChange);
