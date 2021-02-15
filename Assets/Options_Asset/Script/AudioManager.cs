@@ -12,6 +12,9 @@ public class AudioManager : MonoBehaviour {
     [SerializeField] AudioClip[] seList;
     [SerializeField] AudioSource audioSourceSE;
 
+
+    
+
     public float BGMVolume {
         get { return audioSourceBGM.volume; }
         set { audioSourceBGM.volume = value; }
@@ -38,6 +41,8 @@ public class AudioManager : MonoBehaviour {
             Destroy(this.gameObject);
             return;
         }
+        BGMVolume = PlayerPrefs.GetFloat("BGM");
+        SEVolume = PlayerPrefs.GetFloat("SE");
         DontDestroyOnLoad(this.gameObject);
     }
 

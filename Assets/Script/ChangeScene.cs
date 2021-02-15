@@ -30,18 +30,7 @@ public class ChangeScene : MonoBehaviour
         ChangeOpening();
     }
 
-    public void ContinueGame_btn()
-    {
-        if(PlayerPrefs.GetString("Scene") == "")
-        {
-            notification.Open();
-        }
-        else
-        {
-            ChangeMap(PlayerPrefs.GetString("Scene"));
-        }
-        
-    }
+    
 
 
     public void ChangeMap(String SceneName)
@@ -202,11 +191,7 @@ public class ChangeScene : MonoBehaviour
 
     }
 
-    public void LoadGame()
-    {
-        ChangeMap(PlayerPrefs.GetString("Scene"));
-        dataManager.LoadPosition();
-    }
+    
 
     public static void setCheckBack(int i)
     {
