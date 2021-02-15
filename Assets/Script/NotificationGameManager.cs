@@ -138,6 +138,7 @@ public class NotificationGameManager : MonoBehaviour
 
     public void DataMini(Boolean Is)
     {
+        Debug.Log("CheckEdit:" + dataUI.CheckEdit);
         if (Is)
         {
             textTimeSave.text = DateTime.Now.ToString();
@@ -145,6 +146,7 @@ public class NotificationGameManager : MonoBehaviour
             {
                 List<DataSave> l = dataManager.DataGame;
                 int i = dataUI.IndexDataChange;
+                Debug.Log("Nuber :" + i);
                 inputField.text = l[i].DataName;
                 if (l[i].TsutsuYR == 1)
                 {
