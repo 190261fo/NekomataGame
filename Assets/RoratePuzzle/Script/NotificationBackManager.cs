@@ -65,6 +65,8 @@ public class NotificationBackManager : MonoBehaviour
         Close();
         timer.isPause = true;
         gameManager.GameS.Stop();
+        gameManager.MainS.UnPause();
+        timer.timecountdown.Stop();
         mainManager.Back();
         if (gameManager.animatorTextWinLose.GetBool("isOpen"))
         {
