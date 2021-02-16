@@ -14,19 +14,50 @@ public class NotificationQuitManager : MonoBehaviour
 
     public void Open()
     {
+        gameManager.GameS.Pause();
+        timer.isPause = true;
         animator.SetBool("IsOpen", true);
+
+
+        
     }
 
     public void Close()
     {
         animator.SetBool("IsOpen", false);
 
+
+        if (gameManager.GameS.isPlaying == false)
+        {
+            gameManager.GameS.UnPause();
+        }
+
+        if (gameManager.Win == true)
+        {
+            timer.isPause = true;
+        }
+        else if (timer.isRunning == false)
+        {
+            timer.isPause = true;
+        }
+        else
+        {
+            timer.isPause = false;
+        }
+
+
+        if (timer.timeReady == false)
+        {
+            gameManager.animatorTextWinLose.SetBool("isOpen", false);
+        }
     }
 
     public void BtnYes()
     {
-        
-        Close();
+        timer.isPause = true;
+        timer.timecountdown.Stop();
+        gameManager.MainS.Stop();
+        animator.SetBool("IsOpen", false);
     }
 
 
