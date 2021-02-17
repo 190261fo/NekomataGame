@@ -932,9 +932,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 39675775}
-        m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
-        m_MethodName: click
+      - m_Target: {fileID: 1054981196}
+        m_TargetAssemblyTypeName: BtnSound, Assembly-CSharp
+        m_MethodName: Cancel_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6481,6 +6481,7 @@ GameObject:
   - component: {fileID: 439191432}
   - component: {fileID: 439191431}
   - component: {fileID: 439191430}
+  - component: {fileID: 439191433}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -6567,6 +6568,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439191428}
   m_CullTransparentMesh: 0
+--- !u!114 &439191433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439191428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230d9c6cfa7287049a43755ee3b1fcad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &446979052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6884,9 +6897,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 479864536}
-        m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
-        m_MethodName: click
+      - m_Target: {fileID: 1525068863}
+        m_TargetAssemblyTypeName: BtnSound, Assembly-CSharp
+        m_MethodName: Save_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8136,6 +8149,7 @@ GameObject:
   - component: {fileID: 562627853}
   - component: {fileID: 562627852}
   - component: {fileID: 562627851}
+  - component: {fileID: 562627854}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -8223,6 +8237,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562627849}
   m_CullTransparentMesh: 0
+--- !u!114 &562627854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562627849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230d9c6cfa7287049a43755ee3b1fcad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &565539940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14988,9 +15014,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 622239627}
-        m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
-        m_MethodName: click
+      - m_Target: {fileID: 562627854}
+        m_TargetAssemblyTypeName: BtnSound, Assembly-CSharp
+        m_MethodName: Cancel_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18084,9 +18110,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 826046808}
-        m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
-        m_MethodName: click
+      - m_Target: {fileID: 439191433}
+        m_TargetAssemblyTypeName: BtnSound, Assembly-CSharp
+        m_MethodName: Load_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27118,7 +27144,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1810733392}
   m_HandleRect: {fileID: 1810733391}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -27533,6 +27559,7 @@ GameObject:
   - component: {fileID: 915801789}
   - component: {fileID: 915801788}
   - component: {fileID: 915801787}
+  - component: {fileID: 915801790}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -27628,6 +27655,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915801785}
   m_CullTransparentMesh: 0
+--- !u!114 &915801790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915801785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230d9c6cfa7287049a43755ee3b1fcad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &920393082
 GameObject:
   m_ObjectHideFlags: 0
@@ -27955,7 +27994,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936713074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.896074, y: 7.500001, z: -10}
+  m_LocalPosition: {x: -8.887417, y: 7.500001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38180,6 +38219,7 @@ GameObject:
   - component: {fileID: 1054981195}
   - component: {fileID: 1054981194}
   - component: {fileID: 1054981193}
+  - component: {fileID: 1054981196}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -38266,6 +38306,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054981191}
   m_CullTransparentMesh: 0
+--- !u!114 &1054981196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054981191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230d9c6cfa7287049a43755ee3b1fcad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1074642056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73480,9 +73532,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1252034379}
-        m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
-        m_MethodName: click
+      - m_Target: {fileID: 915801790}
+        m_TargetAssemblyTypeName: BtnSound, Assembly-CSharp
+        m_MethodName: Cancel_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -74185,9 +74237,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1302740052}
-        m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
-        m_MethodName: click
+      - m_Target: {fileID: 439191433}
+        m_TargetAssemblyTypeName: BtnSound, Assembly-CSharp
+        m_MethodName: Cancel_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -77387,9 +77439,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1506214334}
-        m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
-        m_MethodName: click
+      - m_Target: {fileID: 1525068863}
+        m_TargetAssemblyTypeName: BtnSound, Assembly-CSharp
+        m_MethodName: Cancel_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -87371,6 +87423,7 @@ GameObject:
   - component: {fileID: 1525068862}
   - component: {fileID: 1525068861}
   - component: {fileID: 1525068860}
+  - component: {fileID: 1525068863}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -87457,6 +87510,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525068858}
   m_CullTransparentMesh: 0
+--- !u!114 &1525068863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525068858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230d9c6cfa7287049a43755ee3b1fcad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1549327104
 GameObject:
   m_ObjectHideFlags: 0
@@ -88583,7 +88648,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1429785840}
   m_HandleRect: {fileID: 1429785839}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -98899,9 +98964,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2069874394}
-        m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
-        m_MethodName: click
+      - m_Target: {fileID: 915801790}
+        m_TargetAssemblyTypeName: BtnSound, Assembly-CSharp
+        m_MethodName: Save_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
