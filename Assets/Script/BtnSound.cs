@@ -24,4 +24,8 @@ public class BtnSound : MonoBehaviour {
         AudioManager.GetInstance().PlaySound(16);
     }
 
+    public void test_Btn() {
+        Debug.Log("選択済");
+    }
+
 }
