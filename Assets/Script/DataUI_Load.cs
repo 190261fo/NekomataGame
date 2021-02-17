@@ -105,7 +105,15 @@ public class DataUI_Load : MonoBehaviour
                     g.transform.GetChild(4).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                     g.transform.GetChild(3).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                 }
-                g.transform.GetChild(9).GetComponent<Text>().text = data.SceneName;
+                if (data.SceneName == "GenjitsuScene")
+                {
+                    g.transform.GetChild(9).GetComponent<Text>().text = "Genjitsu-S";
+                }
+                else
+                {
+                    g.transform.GetChild(9).GetComponent<Text>().text = "Isekai-S";
+                }
+                
                 g.transform.GetChild(2).GetComponent<Text>().text = data.Time.ToString();
                 g.transform.GetChild(1).GetComponent<Button>().AddEventListener(i, Load);
             }

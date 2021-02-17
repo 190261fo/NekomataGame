@@ -134,7 +134,14 @@ public class DataUI : MonoBehaviour
                     g.transform.GetChild(7).GetComponent<Image>().color = new Color32(255, 255, 255, 0);
                     g.transform.GetChild(8).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                 }
-                g.transform.GetChild(11).GetComponent<Text>().text = data.SceneName;
+                if(data.SceneName == "GenjitsuScene")
+                {
+                    g.transform.GetChild(11).GetComponent<Text>().text = "G";
+                }
+                else
+                {
+                    g.transform.GetChild(11).GetComponent<Text>().text = "I";
+                }
                 g.transform.GetChild(4).GetComponent<Text>().text = data.Time.ToString();
                 g.transform.GetChild(1).GetComponent<Button>().AddEventListener(i, Delete);
                 g.transform.GetChild(2).GetComponent<Button>().AddEventListener(i, Edit);
