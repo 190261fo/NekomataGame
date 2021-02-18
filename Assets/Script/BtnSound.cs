@@ -24,6 +24,10 @@ public class BtnSound : MonoBehaviour {
         AudioManager.GetInstance().PlaySound(16);
     }
 
+    public void Game_PointerEnter_Btn() {
+        AudioManager.GetInstance().PlaySound(20);
+    }
+
     public void test_Btn() {
         Debug.Log("選択済");
     }
